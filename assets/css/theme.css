@@ -1505,6 +1505,17 @@ textarea.is-invalid {
 .btn.style4:hover:before {
   background-color: var(--theme-color);
 }
+.btn.center.before {
+    background: var(--title-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    border: 3px solid green;
+    padding-top: 2000px;
+    margin-top: 2000px;
+    mar
+  }
 .btn.style5 {
   border-radius: 0;
   padding: 21px 34px 23px;
@@ -13162,7 +13173,9 @@ span.select2-selection.select2-selection--single:focus {
 .space-top {
   padding-top: var(--section-space);
 }
-
+.space-halved {
+  padding-top: var(--section-space);
+}
 .space,
 .space-bottom {
   padding-bottom: var(--section-space);
