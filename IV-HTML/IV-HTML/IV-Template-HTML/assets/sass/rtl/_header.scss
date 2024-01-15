@@ -1,0 +1,52 @@
+.social-links .social-title {
+    margin: 0 0 0 15px;
+}
+.social-links a {
+    margin: 0 0 0 20px;
+    &:last-child {
+        margin-left: 0;
+    }
+}
+.header-links li:not(:last-child) {
+    margin: 0 0 0 40px;
+}
+.main-menu ul.mega-menu ul.sub-menu, .main-menu ul.sub-menu ul.sub-menu {
+    right: 100%;
+    left: auto;
+    margin: 0 0;
+    margin-right: 0px;
+}
+.main-menu > ul > li:last-child {
+    margin-left: 0 !important;
+    margin-right: 22px !important;
+}
+.main-menu > ul > li:first-child {
+    margin-right: 0 !important;
+    margin-left: 22px !important;
+}
+.mobile-menu-wrapper {
+    text-align: -webkit-left;
+}
+
+.header-layout1 .main-menu {
+    margin-right: 150px;
+    margin-left: 0;
+}
+@include xxl {
+    .header-layout1 .main-menu {
+        margin-right: 30px;
+    }
+}
+
+.header-links li > i {
+    margin-right: 0px;
+    margin-left: 8px;
+}
+
+.header-layout3 .header-top .header-links li:not(:last-child) {
+    border-left: 1px solid #333F50;
+    padding-left: 25px;
+    margin: 0 0 0 25px;
+    border-right: 0;
+    padding-right: 0;
+}

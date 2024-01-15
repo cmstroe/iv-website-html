@@ -1,0 +1,122 @@
+/* Faq 1 ---------------------------------- */ 
+.faq-area-1 {
+    position: relative;
+    .faq-bg-img-1 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50%;
+        display: inline-block;
+        height: 100%;
+        img {
+            object-fit: cover;
+        }
+        @include lg {
+            width: 40%;
+        }
+        @include md {
+            width: 100%;
+            position: relative;
+            height: 500px;
+            top: -80px;
+        }
+    }
+}
+.faq-content-wrap {
+    padding: 0 108px;
+    .sec-title {
+        font-size: 40px;
+        line-height: 57px;
+    }
+    @include xl {
+        padding: 0 68px;
+    }
+    @include md {
+        padding: 0 50px;
+        .sec-title {
+            font-size: 32px;
+            line-height: normal;
+        }
+    }
+    @include xs {
+        padding: 0 15px;
+    }
+    @include vxs {
+        .sec-title {
+            font-size: 28px;
+        }
+    }
+}
+.accordion-card {
+    transition: 0.4s ease-in-out;
+    overflow: hidden;
+    background: $white-color;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    .accordion-button {
+        font-size: 18px;
+        font-weight: 700;
+        font-family: $title-font;
+        color: $title-color;
+        border: 0;
+        background: $white-color;
+        padding: 0px 30px 0px 30px;
+        min-height: 75px;
+        gap: 10px;
+        margin-bottom: 0;
+        text-align: left;
+        transition: 0.3s;
+        position: relative;
+        &:after {
+            content: "\f067";
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            line-height: 30px;
+            background: $theme-color;
+            border: 0;
+            font-family: $icon-font;
+            color: $white-color;
+            font-weight: 900;
+            font-size: 16px;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            top: 20px;
+            right: 30px;
+            transition: 0.3s ease-in-out;
+        }
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+        &:not(.collapsed) {
+            background: $theme-color;
+            color: $white-color;
+            &:after {
+                content: '\f068';
+                transform: rotate(0);
+                background: $white-color;
+                color: $theme-color;
+            }
+        }
+    }
+    .accordion-collapse {
+        border: none;
+    }
+    .accordion-body {
+        border-radius: 0;
+        background-color: transparent;
+        border: none;
+        padding: 30px;
+        margin-top: -0.5em;
+        p {
+            margin-bottom: -0.3em;
+            font-weight: 400;
+        }
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

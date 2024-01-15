@@ -1,0 +1,30 @@
+@for $i from 1 through $space-count {
+    .ml-#{5 * $i} {
+        margin-right: 5px * $i;
+        margin-left: 0;
+    }
+}
+
+/*-- margin Right --*/
+@for $i from 1 through $space-count {
+    .mr-#{5 * $i} {
+        margin-left: 5px * $i;
+        margin-right: 0;
+    }
+}
+
+/*-- Padding Left --*/
+@for $i from 1 through $space-count {
+    .pl-#{5 * $i} {
+        padding-left: 0;
+        padding-right: 5px * $i;
+    }
+}
+
+/*-- Padding Right --*/
+@for $i from 1 through $space-count {
+    .pr-#{5 * $i} {
+        padding-right: 0;
+        padding-left: 5px * $i;
+    }
+}

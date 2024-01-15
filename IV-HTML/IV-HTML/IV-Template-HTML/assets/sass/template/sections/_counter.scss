@@ -1,0 +1,70 @@
+/* Counter 1 ---------------------------------- */
+.counter-area-1 {
+    position: relative;
+    z-index: 9;
+}
+.counter-wrap {
+    border-radius: 30px;
+    padding: 80px;
+    @include md {
+        padding: 60px;
+    }
+}
+.counter-card {
+    text-align: center;
+    &-icon {
+        margin-bottom: 44px;
+        svg {
+            width: 75px;
+            height: 75px;
+            transition: 0.4s;
+        }
+    }
+    &_number {
+        margin-bottom: 5px;
+        color: $white-color;
+        margin-top: -0.1em;
+    }
+    &_text {
+        font-size: 18px;
+        font-weight: 700;
+        color: $white-color;
+        margin-bottom: -0.3em;
+    }
+    &:hover {
+        .counter-card-icon {
+            svg {
+                transform: rotateY(180deg);
+            }
+        }
+    }
+}
+@include md {
+    .counter-card-icon {
+        margin-bottom: 30px;
+    }
+}
+/* Counter 2 ---------------------------------- */
+.counter-area-2 {
+    position: relative;
+    z-index: 0;
+    &:after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: #171010D9;
+        opacity: 0.9;
+        z-index: -1;
+    }
+}
+/* Counter 3 ---------------------------------- */
+.counter-card.style2 {
+    .counter-card-icon {
+        height: 150px;
+        width: 150px;
+        line-height: 150px;
+        background: $theme-color;
+        border-radius: 50%;
+        display: inline-block;
+    }
+}

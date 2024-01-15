@@ -1,0 +1,81 @@
+/*instagram area ***************/
+.instagram-area {
+    border-top: 1px solid #D9D9D9;
+    padding: 0 50px;
+    @include xs {
+        padding-left: 15px;
+        padding-right: 15px;   
+    }
+}
+.instagram-card {
+    position: relative;
+    &-img {
+        overflow: hidden;
+        img {
+            transition: 0.4s;
+            width: 100%;
+        }
+    }
+    &-details {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        inset: 20px;
+        background: rgba(255,255,255,0.83);
+        transition: 0.4s;
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    &-subtitle {
+        font-size: 12px;
+        font-weight: 400;
+        color: $theme-color;
+        text-transform: uppercase;
+    }
+    &-title {
+        font-size: 24px;
+        font-weight: 400;
+        a {
+            color: $title-color;
+            &:hover {
+                color: $theme-color;
+            }
+        }
+    }
+    &:hover {
+        .instagram-card-img {
+            img {
+                transform: scale(1.08);
+            }
+        }
+        .instagram-card-details {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+}
+/*share area ***************/
+.share-thumb {
+    position: relative;
+    padding: 118px 268px 104px 0;
+    .share-img-1 {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }
+    .share-img-3 {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}
+@include md {
+    .share-thumb {
+        margin-bottom: 50px;
+    }
+}

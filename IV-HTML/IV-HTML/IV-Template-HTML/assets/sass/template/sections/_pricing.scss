@@ -1,0 +1,74 @@
+.pricing-card {
+    background: $white-color;
+    border-radius: 0px;
+    padding: 80px 60px;
+    position: relative;
+    text-align: center;
+    z-index: 0;
+    border: 1px solid #E3E5DE;
+    &_title {
+        font-size: 30px;
+        font-weight: 400;
+        margin-bottom: 35px;
+        transition: 0.4s;
+        margin-top: -0.3em;
+    }
+    .price-card-wrap {
+        border: 1px solid #E8E2DF;
+        padding: 35px 35px 0;
+        .btn {
+            transform: translate(0, 50%);
+            margin-top: -25px;
+        }
+    }
+    &_price {
+        font-size: 48px;
+        font-weight: 400;
+        color: $theme-color;
+        transition: 0.4s;
+        margin-bottom: 29px;
+        margin-top: -13px;
+        .duration {
+            font-size: 14px;
+            font-weight: 500;
+            font-family: $body-font;
+            text-transform: uppercase;
+            color: $title-color;
+            display: block;
+            margin-top: 5px;
+        }
+    }
+    .checklist {
+        margin-top: 70px;
+        margin-bottom: -3px;
+        li {
+            font-size: 16px;
+            color: $body-color;
+            font-weight: 300;
+            justify-content: center;
+            text-align: center;
+            &:not(:last-child) {
+                margin-bottom: 12px;
+            }
+            i, svg {
+                color: $body-color;
+            }
+        }
+    }
+}
+@include ml {
+    .pricing-card {
+        padding: 50px 40px;
+    }
+    .pricing-card_price {
+        font-size: 60px;
+    }
+}
+@include lg {
+    .pricing-card_title {
+        font-size: 24px;
+    }
+    .pricing-card {
+        padding: 40px 30px;
+    }
+}

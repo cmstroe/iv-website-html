@@ -1,0 +1,195 @@
+.shape-mockup-wrap {
+    z-index: 2;
+    position: relative;
+}
+.shape-mockup {
+    position: absolute;
+    z-index: -1;
+    &.z-index-3 {
+        z-index: 3;
+    }
+}
+
+.z-index-step1 {
+    position: relative;
+    z-index: 4 !important;
+}
+
+.z-index-common {
+    position: relative;
+    z-index: 3;
+}
+
+.z-index-3 {
+    z-index: 3;
+}
+
+.z-index-n1 {
+    z-index: -1;
+}
+
+.media-body {
+    flex: 1;
+}
+.style-italic {
+    font-style: italic;
+}
+.badge {
+    position: absolute;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: inline-block;
+    text-align: center;
+    background-color: $theme-color;
+    color: $white-color;
+    padding: 0.2em 0.45em;
+    font-size: 0.6em;
+    border-radius: 50%;
+    top: 7px;
+    left: 12px;
+    font-weight: 400;
+    transition: 0.3s ease-in-out;    
+}
+
+.social-btn {
+    display: flex;
+    gap: 15px;
+    a {
+        height: var(--icon-size, 40px);
+        width: var(--icon-size, 40px);
+        line-height: 38px;
+        display: inline-block;
+        color: $theme-color;
+        text-align: center;
+        font-size: 16px;
+        border-radius: 50%;
+        border: 1px solid $smoke-color2;
+        background: $smoke-color2;
+        &:hover {
+            background: $theme-color;
+            color: $white-color;
+            border-color: $theme-color;
+        }
+    }
+    &.style2 {
+        gap: 25px;
+        a {
+            background: transparent;
+            width: auto;
+            height: auto;
+            line-height: normal;
+            border-radius: 0;
+            color: $white-color;
+            border: 0;
+            font-size: 16px;
+            &:hover {
+                background: transparent;
+                color: $theme-color;
+            }
+        }
+    }
+    &.style3 {
+        gap: 15px;
+        background: $white-color;
+        border-radius: 5px;
+        padding: 10px 15px;
+        display: inline-flex;
+        a {
+            background: transparent;
+            width: auto;
+            height: auto;
+            line-height: normal;
+            border-radius: 0;
+            color: $body-color;
+            border: 0;
+            font-size: 16px;
+            border-right: 1px solid $border-color;
+            padding-right: 15px;
+            &:hover {
+                background: transparent;
+                color: $theme-color;
+            }
+            &:last-child {
+                border-right: 0;
+                padding-right: 0;
+            }
+        }
+    }
+    &.style4 {
+        a {
+            --icon-size: 40px;
+            line-height: 40px;
+            font-size: 16px;
+            background: transparent;
+            color: $white-color;
+            border-color: $white-color;
+            border-radius: 5px;
+            &:hover {
+                background: $white-color;
+                color: $theme-color;
+                border-color: $white-color;
+            }
+        }
+    }
+    &.color-theme {
+        a {
+            color: $body-color;
+            border-color: $theme-color;
+        }
+    }
+}  
+.global-carousel.slider-shadow {
+    .slick-list {
+        padding: 30px 0px 40px 0px !important;
+        margin: -30px 0px -40px 0px;
+    }
+}
+.btn-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    .btn {
+        border-radius: 5px;
+        flex: none;
+    }
+    &.style2 {
+        gap: 20px 70px;
+        @include sm {
+            gap: 20px 30px;
+        }
+    }
+}
+
+/*******Magnific Image*******/
+.mfp-zoom-in .mfp-content {
+    opacity: 0;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    -webkit-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7); }
+.mfp-zoom-in.mfp-bg {
+    opacity: 0;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease; }
+.mfp-zoom-in.mfp-ready .mfp-content {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); }
+.mfp-zoom-in.mfp-ready.mfp-bg {
+    opacity: 0.7; }
+    .mfp-zoom-in.mfp-removing .mfp-content {
+    -webkit-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7);
+    opacity: 0; }
+.mfp-zoom-in.mfp-removing.mfp-bg {
+    opacity: 0; }
+

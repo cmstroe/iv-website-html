@@ -1,0 +1,61 @@
+.hero-3 {
+    background-position: right;
+}
+.hero-style3 {
+    padding-left: 130px;
+    padding-right: 0;
+}
+/*about area 3***********************/
+.about-thumb3 {
+    padding-right: 130px;
+    padding-left: 0;
+    .about-img-2 {
+        right: 20px;
+        left: auto;
+    }
+    .about-img-3 {
+        right: -45px;
+        left: auto;
+    }
+}
+@include xl {
+    .about-thumb3 .about-img-3 {
+        right: 0;
+    }
+}
+@include lg {
+    .about-thumb3 {
+        padding-right: 0;
+    }
+}
+@include md {
+    .about-thumb3 {
+        padding-right: 0;
+    }
+    .about-thumb3 .about-img-2 {
+        left: 20px;
+        right: auto;
+    }
+    .about-thumb3 .about-img-3 {
+        left: 0;
+        right: auto;
+    }
+}
+.why-area-2 .why-bg-img-1 {
+    right: 0;
+    left: auto;
+}
+
+.contact-area-2 .contact-bg-img-1 {
+    left: 0;
+    right: auto;
+}
+.process-card.style3 {
+    padding: 30px;
+    text-align: right;
+    display: block;
+}
+.process-card.style3 .link-btn i {
+    margin-right: 18px;
+    margin-left: 0;
+}

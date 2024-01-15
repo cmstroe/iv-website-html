@@ -1,0 +1,72 @@
+.about-thumb {
+    padding-left: 35px;
+    margin-left: 50px;
+    padding-right: 0;
+    margin-right: 0;
+}
+@include xl {
+    .about-thumb {
+        margin-left: 0;
+    }
+}
+@include lg {
+    .about-thumb {
+        padding-left: 0;
+    }
+}
+/*skill-feature 1***********************/
+.skill-feature {
+    .progress {
+        .progress-value {
+            left: 0;
+            right: auto;
+        }
+    }
+}
+@include lg {
+    .about-content-wrap.style3 {
+        padding-right: 40px;
+    }
+}
+@include md {
+    .about-content-wrap.style3 {
+        padding-right: 0;
+        margin-right: 0;
+    }
+}
+.process-card {
+    padding-left: 76px;
+    padding-right: 0;
+    @include lg {
+        padding-left: 26px;
+    }
+    @include md {
+        padding-left: 0;
+    }
+}
+.process-card-wrap:last-child .process-card {
+    padding-left: 0;
+}
+.process-card .process-arrow {
+    left: -24px;
+    right: auto;
+    transform: rotateY(180deg);
+}
+.process-card-wrap:nth-of-type(even) .process-card .process-arrow {
+    left: -34px;
+    right: auto;
+}
+
+.faq-area-1 .faq-bg-img-1 {
+    right: 0;
+    left: auto;
+}
+
+.team-card-wrap:nth-of-type(odd) .team-card {
+    text-align: left;
+}
+
+.post-meta-item span i, .post-meta-item a i, .blog-meta span i, .blog-meta a i {
+    margin-left: 8px;
+    margin-right: 0;
+}

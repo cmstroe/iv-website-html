@@ -1,0 +1,84 @@
+/*----------------------------------------------
+    # why choose us area style here
+----------------------------------------------*/
+.why-box-wrap {
+    .why-wrap-icon {
+        height: 70px;
+        width: 70px;
+        background: $white-color;
+        border-radius: 100%;
+        margin-bottom: 35px;
+        svg {
+            position: relative;
+            top: 10px;
+            left: 20px;
+            transition: 0.4s;
+        }
+    }
+    .why-wrap-title {
+        font-size: 22px;
+        margin-bottom: 11px;
+        a {
+            color: $title-color;
+            &:hover {
+                color: $theme-color;
+            }
+        }
+    }
+    .why-wrap-text {
+        margin-bottom: -0.4em;
+    }
+    &:hover {
+        .why-wrap-icon svg {
+            top: 6px;
+            left: 6px;
+        }
+    }
+}
+@include md {
+    .why-area-1 {
+        background-position: left;
+    }
+}
+
+/* Why Choose Us Area 2 ---------------------------------- */
+.why-area-2 {
+    position: relative;
+    border-radius: 15px;
+    .why-bg-img-1 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        width: 50%;
+    }
+    .why-wrap {
+        padding: 58px 60px 60px 48px;
+    }
+}
+@include lg {
+    .why-area-2 .why-bg-img-1 {
+        width: 41%;
+    }
+}
+@include md {
+    .why-area-2 .why-bg-img-1 {
+        position: initial;
+        width: 100%;
+        height: 400px;
+    }
+    .why-area-2 .why-wrap {
+        padding: 58px 60px 60px 60px;
+    }
+}
+@include sm {
+    .why-area-2 .why-wrap {
+        padding: 50px;
+    }
+}
+@include xs {
+    .why-area-2 .why-wrap {
+        padding: 30px;
+    }
+}

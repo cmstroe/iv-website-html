@@ -1,0 +1,94 @@
+/* Video 1 ---------------------------------- */ 
+.video-wrap {
+    position: relative;
+    .play-btn {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    @include md {
+        .play-btn > i {
+            --icon-size: 80px;
+            --icon-font-size: 20px;
+        }
+    }
+    @include xs {
+        .play-btn > i {
+            --icon-size: 60px;
+            --icon-font-size: 16px;
+        }
+    } 
+}
+/* Video 2 ---------------------------------- */ 
+.video-area-2 {
+    .container-fluid {
+        padding: 0 120px;
+    }
+    .video-quote {
+        font-family: $title-font;
+        font-style: italic;
+        font-size: 30px;
+        line-height: 40px;
+        color: $title-color;
+        margin-top: -0.3em;
+        margin-bottom: 68px;
+    }
+}
+.video-wrap.style2 {
+    &:after {
+        content: '';
+        position: absolute;
+        inset: 60px;
+        border: 1px solid $white-color;
+    }
+    .play-btn {
+        > i {
+            --icon-size: 160px;
+        }
+        span {
+            position: absolute;
+            left: 37px;
+            bottom: 23px;
+            font-size: 14px;
+            text-transform: uppercase;
+            color: $body-color;
+            transition: 0.4s;
+        }
+        &:hover {
+            span {
+                color: $white-color;
+            }
+        }
+    }
+}
+@include xxl {
+    .video-area-2 .container-fluid {
+        padding: 0 40px;
+    }
+    .video-wrap.style2 .play-btn {
+        > i {
+            --icon-size: 100px;
+            --icon-font-size: 24px;
+        }
+        span {
+            display: none;
+        }
+    }
+    .video-wrap.style2:after {
+        inset: 30px;
+    }
+}
+@include xs {
+    .video-area-2 .video-quote {
+        font-size: 22px;
+        line-height: normal;
+    }
+    .video-area-2 .container-fluid {
+        padding: 0 15px;
+    }
+    .video-wrap.style2 .play-btn > i {
+        --icon-size: 60px;
+        --icon-font-size: 16px;
+    }
+}

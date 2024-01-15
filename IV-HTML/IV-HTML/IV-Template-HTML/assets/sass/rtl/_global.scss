@@ -1,0 +1,12 @@
+@include rtl {
+    @import 'spacing';
+
+    @import 'common';
+    @import 'header';
+    @import 'footer';
+    @import 'simple-sections';
+    @import 'blog';
+    @import 'home_1';
+    @import 'home_2';
+    @import 'home_3';
+}

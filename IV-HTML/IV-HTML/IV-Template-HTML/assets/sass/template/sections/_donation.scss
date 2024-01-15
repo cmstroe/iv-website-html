@@ -1,0 +1,208 @@
+/* Donation 1 ---------------------------------- */
+.donation-card {
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid $border-color;
+    .donation-card-img {
+        overflow: hidden;
+        img {
+            transition: 0.4s;
+        }
+    }
+    .donation-card-content {
+        padding: 30px;
+        .donation-card-title {
+            font-size: 20px;
+            line-height: 28px;
+            font-weight: 700;
+            a {
+                color: $title-color;
+                &:hover {
+                    color: $theme-color;
+                }
+            }
+        }
+        .donation-card-text {
+            margin-bottom: 25px;
+        }
+        .skill-feature {
+            margin-bottom: 5px;
+        }
+        .donate-price-innter {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $title-color;
+        }
+        .btn {
+            margin-top: 20px;
+            width: 100%;
+            justify-content: center;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 700;
+            &:after {
+                display: none;
+            }
+            &:hover {
+                background: $title-color;
+            }
+        }
+    }
+    &:hover {
+        .donation-card-img {
+            img {
+                transform: scale(1.15);
+            }
+        }
+    }
+}
+/* Donation 2 ---------------------------------- */
+.donation-card.style2 {
+    display: flex;
+    background: $white-color;
+    .donation-card-img {
+        max-width: 270px;
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+@include lg {
+    .donation-card.style2 .donation-card-img {
+        max-width: 190px;
+    }
+}
+@include md {
+    .donation-card.style2 .donation-card-img {
+        max-width: 270px;
+    }
+}
+@include xs {
+    .donation-card.style2 {
+        display: block;
+        .donation-card-img {
+            max-width: none;
+        }
+    }
+}
+/* Donation details ---------------------------------- */
+.donation-page-single {
+    .page-img {
+        img {
+            border-radius: 15px;
+        }
+    }
+    .page-title {
+        font-weight: 700;
+    }
+    .skill-feature {
+        .donate-status {
+            display: inline-flex;
+            align-items: center;
+            h2 {
+                font-size: 39px;
+                font-weight: 400;
+                @include xs {
+                    font-size: 36px;
+                }
+            }
+        }
+    }
+    .warning-notice {
+        background: $smoke-color;
+        box-shadow: 0 1px 1px rgba(0,0,0,.125);
+        margin: 15px 0;
+        padding: 1em 1.5em 1em 2em;
+        border-left: 4px solid #ffba00;
+        position: relative;
+        p {
+            margin-bottom: 0;
+        }
+        .icon {
+            height: 30px;
+            width: 30px;
+            position: absolute;
+            background: #ffba00;
+            border-radius: 50%;
+            color: $white-color;
+            text-align: center;
+            font-size: 13px;
+            left: -18px;
+            top: 50%;
+            margin-top: -15px;
+        }
+        strong {
+            color: $title-color;
+        }
+        @include xs {
+            margin-left: 15px;
+        }
+    }
+    .donation-form {
+        padding: 60px 50px;
+        border-radius: 15px;
+        border: 1px solid $border-color;
+        margin-bottom: 30px;
+        margin-top: 40px;
+        input {
+            height: 48px;
+        }
+        .btn.style-border {
+            border-radius: 5px;
+            font-size: 14px;
+            padding: 10.5px 20px;
+        }
+        .form-group.form-icon-left > i {
+            height: 48px;
+            background: $theme-color;
+            color: $white-color;
+            line-height: 48px;
+            top: 0;
+            left: 0;
+            width: 45px;
+            text-align: center;
+        }
+        .form-title {
+            font-weight: 700;
+            color: $body-color;
+            margin-top: 33px;
+            margin-bottom: 20px;
+            padding-bottom: 7px;
+            border-bottom: 1px solid $border-color;
+        }
+        @include lg {
+            padding: 40px 40px;
+        }
+    }
+    .nav-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        .nav-item {
+            width: auto;
+            border: 0;
+            margin: 0;
+            padding: 0;
+            .nav-link {
+                border: 0;
+                background: transparent;
+                border: 1px solid $border-color;
+                border-radius: 5px;
+                padding: 10px 25px;
+                font-size: 15px;
+                color: $body-color;
+                &.active,
+                &:active,
+                &:focus,
+                &:hover {
+                    background: $title-color;
+                    color: $white-color;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,215 @@
+/* Service Card ---------------------------------- */
+.service-card {
+    background: $white-color;
+    border-radius: 15px;
+    text-align: center;
+    padding: 50px 0 0;
+    overflow: hidden;
+    &_icon {
+        height: 100px;
+        width: 100px;
+        line-height: 100px;
+        border-radius: 50%;
+        background: $smoke-color2;
+        margin: 0 auto 35px;
+        transition: 0.4s;
+        svg {
+            transition: 0.4s;
+        }
+    }
+    &_content {
+        padding: 0 30px 48px;
+    } 
+    &_title {
+        margin-top: -0.3em;
+        margin-bottom: 15px;
+        font-size: 22px;
+        a {
+            color: $title-color;
+        }
+    }
+    &_text {
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: -0.4em;
+    }
+    &_img {
+        position: relative;
+        overflow: hidden;
+        &:after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgb(15 44 73);
+            opacity: 0;
+            transition: 0.4s;
+        }
+        img {
+            transition: 0.4s;
+            width: 100%;
+        }
+        .btn {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            opacity: 0;
+        }
+    }
+    &:hover {
+        .service-card_icon {
+            background: $theme-color;
+            svg {
+                transform: rotateY(180deg);
+                filter: brightness(99);
+            }
+        }
+        .service-card_title {
+            a {
+                color: $theme-color;
+            }
+        }
+        .service-card_img {
+            img {
+                transform: scale(1.15);
+            }
+            &:after {
+                opacity: 0.9;
+            }
+            .btn {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+    }
+}
+@include xs {
+    .service-card {
+        padding: 40px 0 0;
+        .service-card_icon {
+            margin: 0 auto 30px;
+        }
+        .service-card_content {
+            padding: 0 30px 38px;
+        }
+    }
+}
+@include vxs {
+    .service-card {
+        padding: 30px 0 0;
+    }
+    .service-card .service-card_content {
+        padding: 0 20px 28px;
+    }
+}
+/* Service Card 2---------------------------------- */
+.service-card.style2 {
+    text-align: left;
+    padding: 50px 30px 43px;
+    border: 1px solid $border-color;
+    border-radius: 15px;
+    transition: 0.4s;
+    .service-card_icon {
+        margin: 0 auto 40px;
+    }
+    .service-card_content {
+        padding: 0;
+        max-width: 210px;
+        margin: auto;
+    }
+    .service-card_text {
+        margin-bottom: 13px;
+    }
+    &:hover {
+        border-color: $white-color;
+        box-shadow: 0px 41.04px 42.48px rgba(0, 0, 0, 0.053);
+    }
+}
+/* Service Card 3---------------------------------- */
+.service-card.style3 {
+    text-align: start;
+    padding: 30px 30px 25px;
+    .service-card-img {
+        border-radius: 15px;
+        overflow: hidden;
+        img {
+            border-radius: 15px;
+            transition: 0.4s;
+        }
+    }
+    .service-card_icon {
+        width: 90px;
+        height: 90px;
+        line-height: 80px;
+        text-align: center;
+        background: $theme-color;
+        margin-top: -45px;
+        z-index: 1;
+        position: relative;
+        margin-left: 30px;
+        border: 5px solid $white-color;
+        margin-bottom: 27px;
+    }
+    .service-card_content {
+        padding: 0;
+    }
+    .service-card_text {
+        margin-bottom: 13px;
+    }
+    &:hover {
+        .service-card-img {
+            img {
+                transform: scale(1.15);
+            }
+        }
+    }
+    &.style-border {
+        border: 1px solid $border-color;
+    }
+}
+
+/* Service details Page---------------------------------- */
+.service-page-single {
+    .page-img {
+        img {
+            border-radius: 15px;
+        }
+    }
+    blockquote {
+        border-left: 5px solid $border-color;
+        background: $smoke-color;
+        padding: 35px 25px;
+        margin: 50px 0;
+        border-radius: 0 10px 10px 0;
+        position: relative;
+        &:before {
+            content: '\f10d';
+            position: absolute;
+            font-family: $icon-font;
+            font-weight: 700;
+            font-size: 90px;
+            opacity: .1;
+            color: $title-color;
+            left: 30px;
+            top: 50px;
+            line-height: 30px;
+        }
+        p {
+            line-height: 30px;
+            font-style: italic;
+            font-size: 19px;
+            font-weight: 500;
+        }
+    }
+    .checklist {
+        li {
+            font-size: 16px;
+            font-weight: 500;
+            i {
+                margin-right: 20px;
+                font-size: 20px;
+                margin-top: 4px;
+            }
+        }
+    }
+}

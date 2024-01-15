@@ -1,0 +1,91 @@
+.hero-style2 {
+    padding-left: 130px;
+    padding-right: 0;
+}
+.hero-2 {
+    background-position: right;
+}
+@include xxl {
+    .hero-2 {
+        background-position: center;
+    }
+}
+@include ml {
+    .hero-style2 {
+        padding-left: 0;
+    }
+}
+@include md {
+    .hero-2 {
+        background-position: right;
+    }
+}
+/*about area 2***********************/
+.about-thumb2 {
+    .about-img-1 {
+        margin: 0 30px 0 0;
+        &:after {
+            right: -30px;
+            left: auto;
+        }
+    }
+    .about-img-2 {
+        right: -50px;
+        left: auto;
+    }
+    .about-shape-1 {
+        left: -30px;
+        right: auto;
+    }
+}
+@include ml {
+    .about-thumb2 {
+        margin-left: 30px;
+        margin-right: 0;
+    }
+}
+@include xl {
+    .about-thumb2 .about-img-2 {
+        right: 0px;
+    }
+}
+@include vxs {
+    .about-thumb2 {
+        margin-left: 0;
+    }
+}
+.why-box-wrap .why-wrap-icon svg {
+    right: 20px;
+    left: auto;
+}
+.why-box-wrap:hover .why-wrap-icon svg {
+    right: 6px;
+}
+@include md {
+    .why-area-1 {
+        background-position: right;
+    }
+}
+.project-card .project-card-details {
+    border-right: 5px solid var(--theme-color);
+    border-left: 0;
+    border-radius: 15px 0 0 15px;
+}
+
+.process-card.style2 .process-arrow {
+    left: -6px;
+    right: auto;
+}
+.process-area-2 .process-card-wrap:nth-of-type(even) .process-card .process-arrow {
+    left: -6px;
+    right: auto;
+}
+.contact-area-1 .contact-thumb {
+    margin-left: 26px;
+    margin-right: 0;
+}
+@include md {
+    .contact-area-1 .contact-thumb {
+        margin-left: 0px;
+    }
+}
