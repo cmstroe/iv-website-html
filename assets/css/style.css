@@ -78,24 +78,24 @@
 /*------------------- 1.2. Function -------------------*/
 /*------------------- 1.3. Variable-------------------*/
 :root {
-  --theme-color: #4BAF47;
+  --theme-color: #7EF92D;
   --title-color: #24231D;
   --body-color: #878680;
-  --smoke-color: #F8F7F0;
+  --smoke-color: #f0fce9;
   --smoke-color2: #EDF7ED;
   --smoke-color3: #F5F5F6;
   --smoke-color4: #F4F4F4;
   --smoke-color5: #F0F2F4;
   --black-color: #202020;
-  --gray-color: #333F4D;
-  --white-color: #ffffff;
+  --gray-color: #41493B;
+  --white-color: #f0fce9;
   --light-color: #9fa2ad;
-  --yellow-color: #FFB539;
-  --success-color: #28a745;
+  --yellow-color: #FF874C;
+  --success-color: #7DC054;
   --error-color: #dc3545;
   --border-color: #E3E3E3;
-  --title-font: "Manrope", sans-serif;
-  --body-font: "Manrope", sans-serif;
+  --title-font: "Permanent Marker", sans-serif;
+  --body-font: "Lexend", sans-serif;
   --icon-font: "Font Awesome 5 Free";
   --main-container: 1296px;
   --container-gutters: 24px;
@@ -253,7 +253,7 @@ h6 a,
 p a,
 span a {
   font-size: inherit;
-  font-family: inherit;
+  font-family: "Permananet Marker";
   font-weight: inherit;
   line-height: inherit;
 }
@@ -270,7 +270,7 @@ h4,
 h5,
 .h6,
 h6 {
-  font-family: var(--title-font);
+  font-family: "Permanent Marker";
   color: var(--title-color);
   text-transform: none;
   font-weight: 700;
@@ -7255,6 +7255,7 @@ li.trackback {
   line-height: 1.144;
   font-weight: 800;
   margin-bottom: 0;
+  font-family: "Permanent Marker";
 }
 
 .hero-text {
