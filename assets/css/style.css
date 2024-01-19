@@ -9570,6 +9570,16 @@ span.select2-selection.select2-selection--single:focus {
   gap: 30px;
   align-items: center;
 }
+.team-card-left {
+  padding-top: 15px;
+  display: flex;
+  background: var(--white-color);
+  border-radius: 15px;
+  padding: 55px 40px 60px;
+  border: 1px solid var(--border-color);
+  gap: 30px;
+  align-items: left;
+}
 .team-card-wrap:nth-of-type(odd) .team-card {
   flex-direction: row-reverse;
   text-align: right;
@@ -9594,6 +9604,16 @@ span.select2-selection.select2-selection--single:focus {
   display: inline-block;
   margin-bottom: 10px;
   margin-right: 4px;
+}
+.team-card-left-title {
+  padding-top: 15px;
+  display: flex;
+  background: var(--white-color);
+  border-radius: 15px;
+  padding: 55px 40px 60px;
+  border: 1px solid var(--border-color);
+  gap: 30px;
+  align-items: left;
 }
 .team-card-title a {
   color: var(--title-color);
