@@ -29,25 +29,58 @@
 
     <style>
 
-.folder-button {
-      background-color: #4CAF50; /* Green */
+    h1 {
+      text-align: left;
+      margin-top: 20px;
+      font-family: "Permanent Marker", sans-serif;
+    }
+
+    .folder-container {
+      text-align: center;
+      margin-top: 20px;
+      font-family: "Permanent Marker", sans-serif;
+    }
+
+    .folder-button {
+      background-color: #7EF92D; /* Green */
       color: white;
       padding: 10px 20px;
       text-align: center;
       text-decoration: none;
       display: inline-block;
       font-size: 16px;
-      margin: 10px;
+      margin-right: 10px;
+      margin-bottom: 0px;
       border-radius: 5px;
       cursor: pointer;
+      outline:none;
+      border: none;
     }
 
     .content {
       display: none;
+      color: #F0F0F0;
+      margin-top: 0px;
+      position: relative;
+      width: 100%;
+      padding: 20px;
+      border-radius: 5px;
     }
 
     .active {
       display: block;
+      background-color: #f0fce9;
+      color: #41493B; /* Green */
+      padding: 10px 20px;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin-right: 10px;
+      margin-bottom: 0px;
+      border-radius: 5px;
+      cursor: pointer;
+      outline:none;
+      border: none;
     }
   </style>
 
@@ -201,96 +234,18 @@
                 </div>
             </div>
         </div>
-        <div class="sticky-wrapper">
-            <!-- Main Menu Area -->
-            <div class="container">
-                <div class="menu-area">
-                    <div class="row align-items-center justify-content-between">
-                        <div class="col-auto">
-                            <div class="header-logo">
-                                <a href="index.html"><img src="assets/img/iv_logo.png" width="100" height=50"
-                                        alt="logo"></a>
-                            </div>
-                        </div>
-                        <div class="col-auto">
-                            <nav class="main-menu d-none d-lg-inline-block">
-                                <ul>
-                                    <li class="menu-item-has-children">
-                                        <a href="#">Acasa</a>
-                                        <ul class="sub-menu">
-                                            <li class="menu-item-has-children">
-                                                <a href="#">Resurse</a>
-                                                <ul class="sub-menu">
-                                                    <li>
-                                                        <a href="home-1-rtl.html">Home One RTL</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="home-2-rtl.html">Home Two RTL</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="home-3-rtl.html">Home Three RTL</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                    </li>
-                                    <li class="menu-item-has-children">
-                                        <a href="#"> Despre IV</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="project.html">Proiect</a></li>
-                                            <li><a href="service-details.html">Service Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item-has-children">
-                                        <a title="" href="#">Resurse</a>
-                                        <ul class="mega-menu">
-                                            <li><a href="#">Page One</a>
-                                                <ul>
-                                                    <li><a href="project.html">Project</a></li>
-                                                    <li><a href="project-details.html">Project Details</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">Page Two</a>
-                                                <ul>
-                                                    <li><a href="donation.html">Donation</a></li>
-                                                    <li><a href="donation-details.html">Donation Single</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item-has-children">
-                                        <a href="#"> Implica-te</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="blog.html">Fomular comunitate</a></li>
-                                            <li><a href="blog-details.html">Formular echipa IV</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                    </li>
-                                </ul>
-                            </nav>
-                            <div class="navbar-right d-inline-flex d-lg-none">
-                                <button type="button" class="menu-toggle icon-btn"><i class="fas fa-bars"></i></button>
-                            </div>
-                        </div>
 
-                    </div>
-                </div>
-            </div>
-        </div>
     </header>
 
-    <div class="hero-wrapper hero-2 space"  id="hero" >
+    <div class="hero-wrapper hero-2"  id="hero" >
         <div class="container">
-            <button class="folder-button" onclick="showContent('content1')">Overview</button>
-            <button class="folder-button" onclick="showContent('content2')">Obiective</button>
-            <button class="folder-button" onclick="showContent('content3')">Criterii</button>
-            <button class="folder-button" onclick="showContent('content4')">Documente Suport</button>
+            <h1>Folder-Like Buttons</h1>
+            <button class="folder-button active" onclick="showContent('content1', this)">Overview</button>
+            <button class="folder-button" onclick="showContent('content2', this)">Obiective</button>
+            <button class="folder-button" onclick="showContent('content3', this)">Criterii</button>
+            <button class="folder-button" onclick="showContent('content4', this)">Documente Suport</button>
           
             <div id="content1" class="content active">
-              <h2>Informatii generale</h2>
               <p>> Căutăm vecini de bloc și asociații care își doresc să formeze o comunitate și să organizeze alături de noi evenimente cu vecinii în jurul sustenabilității. Vom monta gratuit panouri foto-voltaice pe blocul comunității.  </p>
 
 
@@ -298,27 +253,44 @@
                 
                 
                 <p> > De-a lungul proiectului, comunitatile primesc din partea echipei noastre suport pentru instalarea panourilor, obținerea calității de prosumator, facilitarea activităților sustenabile și organizarea comunitară.   </p>
+
                 <p> > În această sesiune vom oferi suport în valoare de 150.000 EUR pentru 10 grupuri de vecini, ce pot aplica din orice oraș din țară. </p>
            
             </div>
           
             <div id="content2" class="content">
-              <h2>Content 2</h2>
-              <p>This is the content for Page 2.</p>
+              <h2>Obiectivele apelului de proiecte</h2>
+              La nivelul fiecarei comunitati castigatoare, crestere: 
+              <ul>
+                <li>Gradul de implicare a vecinilor</li>
+                <li>Numar de vecini implicati in activitati comunitare</li>
+                <li>Capacitatea de a lucra impreuna</li>
+                <li>Sustenabilitate</li>
+              </ul>
             </div>
           
             <div id="content3" class="content">
               <h2>Content 3</h2>
-              <p>This is the content for Page 3.</p>
+              Pentru a fi eligibile să aplice pentru un grant ÎntreVecini, o comunitate de vecini trebuie să îndeplinească următoarele criterii.
+              <ol type="a">
+                <li>Comunitatea trebuie să fie dintr-o zonă urbană</li>
+                <li>Blocul comunității aplicante trebuie să aibă o Asociație de Proprietari</li>
+                <li>Acoperișul blocului trebuie să poată beneficia de panouri fotovoltaice</li>
+                <li>În proximitatea blocului există un spațiu deschis unde se pot organiza activități comunitare cu minim 100 de persoane</li>
+                <li>Există minim 5 vecini ce pot forma un nucleu de proiect și își pot asuma timp de 1 an, implementarea activităților</li>
+                <li>Nucleul poate demonstra o bună cunoaștere și conectare la comunitatea în care va fi implementat proiectul, prin istoric de proiecte derulate sau parteneriate locale.</li>
+                <li>Există minim un canal de comunicare activ cu vecinii din comunitate (Pagina de Facebook / Grup de WhatsApp)</li>
+
+              </ol>
             </div>
           
             <div id="content4" class="content">
-              <h2>Content 4</h2>
-              <p>This is the content for Page 4.</p>
+              <h2>Link formular de aplicatie Etapa 1</h2>
+              <p>Documente suport</p>
             </div>
           
             <script>
-              function showContent(contentId) {
+              function showContent(contentId, button) {
                 var allContents = document.getElementsByClassName('content');
                 for (var i = 0; i < allContents.length; i++) {
                   allContents[i].classList.remove('active');
@@ -326,14 +298,21 @@
           
                 var selectedContent = document.getElementById(contentId);
                 selectedContent.classList.add('active');
+
+                var allButtons = document.getElementsByClassName('folder-button');
+                for (var i = 0; i < allButtons.length; i++) {
+                    allButtons[i].style.backgroundColor = "#7EF92D"; // Initial color
+                    allButtons[i].style.color = "#f0fce9"
+                }
+
+                // Change the color of the clicked button
+                button.style.backgroundColor = "#f0fce9"; 
+                button.style.color = "#41493B"
+          
               }
             </script>
         </div>
     </div>
-
-
-
-
 
 
         <footer class="footer-wrapper footer-layout1 overflow-hidden" data-bg-src="assets/img/bg/footer-bg-1.svg">

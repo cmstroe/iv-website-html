@@ -282,6 +282,7 @@ h6 {
 h1 {
   font-size: 80px;
   line-height: 1.167;
+  font-family: "Permanent Marker", sans-serif; 
 }
 
 .h2,
@@ -7443,6 +7444,8 @@ li.trackback {
 .hero-2 {
   margin-top: 100px;
   background-position: left;
+  background-color: #dff0d5;
+  font-family: "Permanent Marker";
 }
 
 .hero-style2 {

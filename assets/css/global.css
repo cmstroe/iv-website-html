@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'IntreVecini';
+    src: url('/fonts/IntreVecini.ttf');
+    font-display: swap;
+  }
+  
+  :root {
+    --background: #f2f2f2;
+    --iv-white: #f8fbfa;
+    --iv-black: #071200;
+    --iv-gray: #41493b;
+    --iv-green: #7ef92d;
+    --iv-green2: #5dc054;
+    --iv-dark-green: #0a2c00;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    list-style: none;
+    font-family: 'Lexend', sans-serif;
+  }
+  
+  html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+  }
+  
+  body {
+    color: var(--iv-black);
+    background: var(--background);
+  }
+  
+  img {
+    height: 1;
+    pointer-events: none;
+  }
+  
+  section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+  }
+  
+  h1 {
+    font-family: 'IntreVecini', sans-serif;
+  }
+  
+  
+  
+  
+  
+  
