@@ -1,57 +1,267 @@
 @font-face {
-    font-family: 'IntreVecini';
-    src: url('/fonts/IntreVecini.ttf');
-    font-display: swap;
+  font-family: "IntreVecini";
+  src: url("/assets/fonts/Intrevecini.ttf");
+  font-display: swap;
+}
+
+:root {
+  --background: #f2f2f2;
+  --iv-white: #f8fbfa;
+  --iv-black: #071200;
+  --iv-gray: #41493b;
+  --iv-green: #7ef92d;
+  --iv-green2: #5dc054;
+  --iv-dark-green: #0a2c00;
+
+  --r-background: 242, 242, 242;
+  --r-iv-white: 248, 251, 250;
+  --r-iv-black: 7, 18, 0;
+  --r-iv-gray: 65, 73, 59;
+  --r-iv-green: 126, 249, 45;
+  --r-iv-green2: 93, 192, 84;
+  --r-iv-dark-green: 10, 44, 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  list-style: none;
+  font-family: "Lexend", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--iv-black);
+  background: var(--background);
+}
+
+img {
+  height: 1;
+  pointer-events: none;
+}
+
+section {
+  min-height: 100vh;
+  padding: 15rem 9% 2rem;
+}
+
+h1 {
+  font-family: "IntreVecini", sans-serif;
+}
+
+/* ------------------------ Navbar ------------------------ */
+
+header {
+  z-index: 100;
+  width: 100%;
+  position: fixed;
+}
+
+.banner {
+  background-color: var(--iv-black);
+  color: var(--iv-white);
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 1rem 9%;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  padding: 1rem 9%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--iv-white);
+  border-radius: 0.75rem;
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+}
+
+.iv-logo {
+  height: 70px;
+}
+
+.link-list {
+  display: flex;
+}
+
+.link-list a {
+  color: var(--iv-dark-green);
+  font-family: "IntreVecini", cursive;
+  font-size: 2.3rem;
+}
+
+.link-list a:hover:not(.iv-btn) {
+  border-bottom: 2px solid var(--iv-dark-green);
+}
+
+.icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+a {
+  font-size: 1.6rem;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
+}
+
+hr {
+  color: var(--iv-white);
+  border: 1px solid var(--iv-white);
+  opacity: 1 !important;
+}
+
+.social-icons {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  padding-right: 1rem;
+}
+
+.social-icons svg {
+  fill: var(--iv-white);
+  width: 2.4rem;
+  height: 2.4rem;
+  transition: all ease 0.4s;
+}
+
+.social-icons svg:hover {
+  fill: var(--iv-green);
+}
+
+#tiktok-icon {
+  width: 1.9rem;
+  height: 1.9rem;
+}
+
+#email {
+  color: var(--iv-white);
+  text-decoration: underline;
+}
+
+#email:hover {
+  color: var(--iv-green);
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+.iv-btn {
+  margin: 1rem;
+  display: inline-block;
+  padding: 1.5rem 1.5rem;
+  background: var(--iv-green);
+  border-radius: 15px;
+  font-size: 2.4rem;
+  color: var(--iv-dark-green);
+  font-family: "IntreVecini", cursive;
+}
+
+#menu-icon {
+  display: none;
+}
+
+@media (max-width: 1300px) {
+  .link-list {
+    display: flex;
+    background-color: rgba(10, 44, 0, 0.5);
+    backdrop-filter: blur(20px);
+    position: fixed;
+    inset: 14% 0 0;
+    padding-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    gap: 2.4rem;
   }
-  
-  :root {
-    --background: #f2f2f2;
-    --iv-white: #f8fbfa;
-    --iv-black: #071200;
-    --iv-gray: #41493b;
-    --iv-green: #7ef92d;
-    --iv-green2: #5dc054;
-    --iv-dark-green: #0a2c00;
+
+  .link-list a:not(.iv-btn) {
+    color: var(--iv-white);
   }
-  
-  * {
+
+  .link-list a:hover:not(.iv-btn) {
+    border-bottom: 2px solid var(--iv-white);
+  }
+
+  .closed {
+    display: none;
+  }
+
+  .menu-icon {
+    height: 3.6rem;
+    width: 3.6rem;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  }
+
+  button {
+    border-radius: 1rem;
+    background: var(--iv-green);
     text-decoration: none;
-    border: none;
-    outline: none;
-    scroll-behavior: smooth;
-    list-style: none;
-    font-family: 'Lexend', sans-serif;
+    padding: 0.6rem;
+    margin: 1rem;
+    cursor: pointer;
+    display: inline-block;
   }
-  
-  html {
-    font-size: 62.5%;
-    overflow-x: hidden;
+}
+
+@media (min-width: 1301px) {
+  .menu-toggle {
+    display: none;
   }
-  
-  body {
-    color: var(--iv-black);
-    background: var(--background);
-  }
-  
-  img {
-    height: 1;
-    pointer-events: none;
-  }
-  
-  section {
-    min-height: 100vh;
-    padding: 10rem 9% 2rem;
-  }
-  
-  h1 {
-    font-family: 'IntreVecini', sans-serif;
-  }
-  
-  
-  
-  
-  
-  
+}
+
+/* ------------------------ Hero Area ------------------------ */
+
+.hero-area {
+  color: var(--iv-white);
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  background-image: linear-gradient(
+      to right,
+      rgba(var(--r-iv-dark-green), 0.9) 0%,
+      rgba(var(--r-iv-dark-green), 0.4) 100%
+    ),
+    url("../img/hero.jpg");
+  background-size: cover;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.hero-area h1 {
+  color: var(--iv-white);
+  font-size: 5.6rem;
+}
+
+.hero-area p {
+  font-size: 2.4rem;
+}
+
+.iv-btn2 {
+  padding: 1.2rem;
+  background: var(--iv-white);
+  border-radius: 15px;
+  font-size: 2.4rem;
+  color: var(--iv-dark-green);
+  font-family: "IntreVecini", cursive;
+  width: fit-content;
+}

@@ -94,7 +94,7 @@
   --success-color: #7DC054;
   --error-color: #dc3545;
   --border-color: #E3E3E3;
-  --title-font: "Permanent Marker", sans-serif;
+  --title-font: "IntreVecini", sans-serif;
   --body-font: "Lexend", sans-serif;
   --icon-font: "Font Awesome 5 Free";
   --main-container: 1296px;
@@ -111,7 +111,7 @@ body {
   scroll-behavior: smooth !important;
 }
 
-body {
+/* body {
   font-family: var(--body-font);
   font-size: 16px;
   font-weight: 400;
@@ -119,8 +119,9 @@ body {
   line-height: 26px;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
-  /***scroll-bar***/
-}
+} 
+*/
+
 body::-webkit-scrollbar {
   width: 10px;
   height: 10px;
@@ -158,7 +159,6 @@ input:focus {
   box-shadow: none;
 }
 
-img:not([draggable]),
 embed,
 object,
 video {
@@ -237,13 +237,6 @@ p:empty {
   display: none;
 }
 
-p {
-  font-family: var(--body-font);
-  margin: 0 0 18px 0;
-  color: var(--body-color);
-  line-height: 1.75;
-}
-
 h1 a,
 h2 a,
 h3 a,
@@ -270,7 +263,7 @@ h4,
 h5,
 .h6,
 h6 {
-  font-family: "Permanent Marker";
+  font-family: "IntreVecini";
   color: var(--title-color);
   text-transform: none;
   font-weight: 700;
@@ -282,7 +275,7 @@ h6 {
 h1 {
   font-size: 80px;
   line-height: 1.167;
-  font-family: "Permanent Marker", sans-serif; 
+  font-family: "IntreVecini", sans-serif; 
 }
 
 .h2,
@@ -7270,7 +7263,7 @@ li.trackback {
   line-height: 1.144;
   font-weight: 800;
   margin-bottom: 0;
-  font-family: "Permanent Marker";
+  font-family: "IntreVecini";
 }
 
 .hero-text {
@@ -7442,10 +7435,10 @@ li.trackback {
 }
 /* Hero 2 ---------------------------------- */
 .hero-2 {
-  margin-top: 100px;
+  padding-top: 200px;
   background-position: left;
   background-color: #dff0d5;
-  font-family: "Permanent Marker";
+  font-family: "IntreVecini";
 }
 
 .hero-style2 {
@@ -13828,7 +13821,7 @@ span.select2-selection.select2-selection--single:focus {
       font-size: 25px;
       font-weight: bold;
       margin-bottom: 10px;
-      font-family: "Permanent Marker", sans-serif;
+      font-family: "IntreVecini", sans-serif;
       padding-bottom: 50px;
       align-items: left;
       color: #24231D;
