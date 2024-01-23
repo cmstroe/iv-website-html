@@ -1,569 +1,604 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="zxx">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title> IntreVecini</title>
-    <meta name="description" content="IntreVecini">
-    <meta name="keywords" content="IntreVecini">
-    <meta name="robots" content="INDEX,FOLLOW">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>IntreVecini</title>
+    <meta name="description" content="IntreVecini" />
+    <meta name="keywords" content="IntreVecini" />
+    <meta name="robots" content="INDEX,FOLLOW" />
 
     <!-- Mobile Specific Metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <!-- Favicons - Place favicon.ico in the root directory -->
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/logo_iv.png">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/logo_iv.png" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
 
     <!--==============================
 	  Google Fonts
 	============================== -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap">
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
     <style>
+      h1 {
+        text-align: left;
+        margin-top: 20px;
+        font-family: "IntreVecini", sans-serif;
+      }
 
-    h1 {
-      text-align: left;
-      margin-top: 20px;
-      font-family: "IntreVecini", sans-serif;
-    }
+      .folder-container {
+        text-align: center;
+        margin-top: 20px;
+        font-family: "IntreVecini", sans-serif;
+      }
 
-    .folder-container {
-      text-align: center;
-      margin-top: 20px;
-      font-family: "IntreVecini", sans-serif;
-    }
+      .folder-button {
+        background-color: #7ef92d; /* Green */
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-right: 10px;
+        margin-bottom: 0px;
+        border-radius: 5px;
+        cursor: pointer;
+        outline: none;
+        border: none;
+      }
 
-    .folder-button {
-      background-color: #7EF92D; /* Green */
-      color: white;
-      padding: 10px 20px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin-right: 10px;
-      margin-bottom: 0px;
-      border-radius: 5px;
-      cursor: pointer;
-      outline:none;
-      border: none;
-    }
+      .content {
+        display: none;
+        color: #f0f0f0;
+        margin-top: 0px;
+        position: relative;
+        width: 100%;
+        padding: 20px;
+        border-radius: 5px;
+      }
 
-    .content {
-      display: none;
-      color: #F0F0F0;
-      margin-top: 0px;
-      position: relative;
-      width: 100%;
-      padding: 20px;
-      border-radius: 5px;
-    }
-
-    .active {
-      display: block;
-      background-color: #f0fce9;
-      color: #41493B; /* Green */
-      padding: 10px 20px;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin-right: 10px;
-      margin-bottom: 0px;
-      border-radius: 5px;
-      cursor: pointer;
-      outline:none;
-      border: none;
-    }
-  </style>
-
+      .active {
+        display: block;
+        background-color: #f0fce9;
+        color: #41493b; /* Green */
+        padding: 10px 20px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-right: 10px;
+        margin-bottom: 0px;
+        border-radius: 5px;
+        cursor: pointer;
+        outline: none;
+        border: none;
+      }
     </style>
 
-    <!--==============================
-	    All CSS File
-	============================== -->
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <!-- Fontawesome Icon -->
-    <link rel="stylesheet" href="assets/css/all.min.css">
-    <!-- Magnific Popup -->
-    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
-    <!-- Slick Slider -->
-    <link rel="stylesheet" href="assets/css/slick.min.css">
-    <!-- Odometer -->
-    <link rel="stylesheet" href="assets/css/odometer.css">
-    <!-- Theme Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css" />
+    <link rel="stylesheet" href="assets/css/slick.min.css" />
+    <link rel="stylesheet" href="assets/css/odometer.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/global.css" />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <!--********************************
    		Code Start From Here 
 	******************************** -->
 
-
     <!--==============================
      Preloader
     ==============================-->
-    <div class="preloader ">
-        <div class="preloader-inner">
-            <img src="assets/img/iv_logo.png" alt="IntreVecini">
-            <span class="loader"></span>
-        </div>
+    <div class="preloader">
+      <div class="preloader-inner">
+        <img src="assets/img/iv_logo.png" alt="IntreVecini" />
+        <span class="loader"></span>
+      </div>
     </div>
 
     <div class="sidemenu-wrapper">
-        <div class="sidemenu-content">
-            <button class="closeButton sideMenuCls"><i class="fas fa-times"></i></button>
-            <div class="widget footer-widget">
-                <div class="widget-about">
-                    <div class="footer-logo">
-                        <a href="index.html"><img src="assets/img/iv_logo.svg" alt="IntreVecini"></a>
-                    </div>
-                    <p class="about-text">Lorem ipsum dolor sit amet consectetur adipiscing elit sociosqu integer,
-                        suscipit nascetur aliquet posuere aptent vehicula ligula pulvinar praesent.</p>
-                    <div class="social-btn style2">
-                        <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
-                        <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
+      <div class="sidemenu-content">
+        <button class="closeButton sideMenuCls"><i class="fas fa-times"></i></button>
+        <div class="widget footer-widget">
+          <div class="widget-about">
+            <div class="footer-logo">
+              <a href="index.html"><img src="assets/img/iv_logo.svg" alt="IntreVecini" /></a>
             </div>
-            <div class="widget widget_nav_menu footer-widget">
-                <h3 class="widget_title">Quick Links</h3>
-                <ul class="menu">
-                    <li><a href="about.html">Acasa</a></li>
-                    <li><a href="project-details.html">Despre IV</a></li>
-                    <li><a href="team.html">Comunitati</a></li>
-                    <li><a href="project.html">Resurse</a></li>
-                    <li><a href="contact.html">Echipa</a></li>
-                </ul>
+            <p class="about-text">
+              Lorem ipsum dolor sit amet consectetur adipiscing elit sociosqu integer, suscipit nascetur aliquet posuere
+              aptent vehicula ligula pulvinar praesent.
+            </p>
+            <div class="social-btn style2">
+              <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+              <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
             </div>
+          </div>
         </div>
+        <div class="widget widget_nav_menu footer-widget">
+          <h3 class="widget_title">Quick Links</h3>
+          <ul class="menu">
+            <li><a href="about.html">Acasa</a></li>
+            <li><a href="project-details.html">Despre IV</a></li>
+            <li><a href="team.html">Comunitati</a></li>
+            <li><a href="project.html">Resurse</a></li>
+            <li><a href="contact.html">Echipa</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <!--==============================
-    Mobile Menu
-    ============================== -->
-    <div class="mobile-menu-wrapper">
-        <div class="mobile-menu-area text-center">
-            <button class="menu-toggle"><i class="fas fa-times"></i></button>
-            <div class="mobile-logo">
-                <a href="index.html"><img src="assets/img/logo.svg" alt="Ecofine"></a>
-            </div>
-            <div class="mobile-menu">
-                <ul>
-                    <li class="menu-item-has-children">
-                        <a title="New Demo" href="#">Home</a>
-                        <ul class="sub-menu">
-                            <li class="menu-item-has-children">
-                                <a href="#">Acasa</a>
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a href="home-2.html">Home Two</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Despre IV</a>
-                        <ul class="sub-menu">
-                            <li><a href="resurse.html">Resurse</a></li>
-                            <li><a href="comunitati.html">Comunitati</a></li>
-                            <li><a href="echipa.html">Echipa</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                            <li><a href="implicare.html">Implica-te</a></li>
-                            <li><a href="project-details.html">Project Details</a></li>
-                            <li><a href="donation.html">Donation Page</a></li>
-                            <li><a href="donation-details.html">Donation Details</a></li>
-                            <li><a href="faq.html">FAQ Page</a></li>
-                            <li><a href="testimonial.html">Testimonial</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Implica-te</a>
-                        <ul class="sub-menu">
-                            <li><a href="blog.html"></a></li>
-                            <li><a href="blog-details.html">Blog Details</a></li>
-                        </ul>
-                    </li>
 
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!--==============================
-	Header Area
-    ==============================-->
-    <header class="nav-header header-layout2">
-        <div class="header-top">
-            <div class="container">
-                <div class="row justify-content-center justify-content-sm-between align-items-center gy-2">
-                    <div class="col-auto d-none d-sm-block">
-                        <div class="header-links">
-                            <ul>
-                                <li><i class="fas fa-envelope"></i><a
-                                        href="mailto:hai@intrevecini.ro">hai@intrevecini.ro</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-auto">
-                        <div class="header-links">
-                            <ul>
-                                <li>
-                                    <div class="social-links">
-                                        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="https://www.tiktok.com/"><i class="fab fa-tiktok"></i></a>
-                                        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!------------------------ Navbar ------------------------>
 
+    <header>
+      <div class="banner">
+        <div class="social-icons">
+          <a href="https://www.facebook.com/intrevecini">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h8.615v-6.96h-2.338v-2.725h2.338v-2c0-2.325 1.42-3.592 3.5-3.592.699-.002 1.399.034 2.095.107v2.42h-1.435c-1.128 0-1.348.538-1.348 1.325v1.735h2.697l-.35 2.725h-2.348V21H20a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1z"
+              ></path>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/intrevecini">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M20.947 8.305a6.53 6.53 0 0 0-.419-2.216 4.61 4.61 0 0 0-2.633-2.633 6.606 6.606 0 0 0-2.186-.42c-.962-.043-1.267-.055-3.709-.055s-2.755 0-3.71.055a6.606 6.606 0 0 0-2.185.42 4.607 4.607 0 0 0-2.633 2.633 6.554 6.554 0 0 0-.419 2.185c-.043.963-.056 1.268-.056 3.71s0 2.754.056 3.71c.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.043 1.268.056 3.71.056s2.755 0 3.71-.056a6.59 6.59 0 0 0 2.186-.419 4.615 4.615 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.187.043-.962.056-1.267.056-3.71-.002-2.442-.002-2.752-.058-3.709zm-8.953 8.297c-2.554 0-4.623-2.069-4.623-4.623s2.069-4.623 4.623-4.623a4.623 4.623 0 0 1 0 9.246zm4.807-8.339a1.077 1.077 0 0 1-1.078-1.078 1.077 1.077 0 1 1 2.155 0c0 .596-.482 1.078-1.077 1.078z"
+              ></path>
+              <circle cx="11.994" cy="11.979" r="3.003"></circle>
+            </svg>
+          </a>
+          <a href="https://www.tiktok.com/@intrevecini">
+            <svg id="tiktok-icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M9.86056 0C4.41472 0 0 4.41472 0 9.86055V29.5817C0 35.0275 4.41472 39.4422 9.86055 39.4422H29.5817C35.0275 39.4422 39.4422 35.0275 39.4422 29.5817V9.86056C39.4422 4.41472 35.0275 0 29.5817 0H9.86056ZM27.2214 9.60433C28.2176 10.7274 29.5439 11.5059 31.0101 11.8283H31.0689C31.5528 11.9282 32.0457 11.9775 32.5397 11.9754V16.9762C30.0247 16.9845 27.5706 16.2024 25.524 14.7405V25.0361C25.5194 26.885 24.9653 28.6908 23.932 30.224C22.8988 31.7573 21.4331 32.9488 19.7212 33.6471C18.0092 34.3454 16.1284 34.5191 14.3175 34.146C12.5066 33.7729 10.8476 32.8699 9.55108 31.5518C8.28606 30.2562 7.42629 28.6199 7.07707 26.8431C6.72784 25.0664 6.90432 23.2263 7.58488 21.5483C8.26544 19.8704 9.42055 18.4272 10.9088 17.3957C12.397 16.3642 14.1537 15.789 15.9638 15.7407C16.4552 15.7292 16.9468 15.7538 17.4346 15.8142V20.962C17.0154 20.8328 16.5789 20.7683 16.1403 20.7708C15.3471 20.7681 14.569 20.9873 13.8939 21.4036C13.2189 21.82 12.6738 22.417 12.3203 23.127C11.9668 23.8371 11.819 24.6319 11.8937 25.4215C11.9683 26.2111 12.2624 26.9641 12.7427 27.5953C13.2788 28.3084 14.0257 28.8348 14.8776 29.0998C15.7294 29.3648 16.6431 29.3551 17.4891 29.072C18.3351 28.7889 19.0706 28.2468 19.5914 27.5225C20.1122 26.7981 20.3919 25.9283 20.3909 25.0361V4.93028H25.4652V5.57743C25.6104 7.07158 26.2252 8.48131 27.2214 9.60433Z"
+              ></path>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/company/intrevecini/">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.339 18.337H5.667v-8.59h2.672v8.59zM7.003 8.574a1.548 1.548 0 1 1 0-3.096 1.548 1.548 0 0 1 0 3.096zm11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387 2.704 0 3.203 1.778 3.203 4.092v4.71z"
+              ></path>
+            </svg>
+          </a>
+          <a href="https://www.youtube.com/@IntreVecini">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M21.593 7.203a2.506 2.506 0 0 0-1.762-1.766C18.265 5.007 12 5 12 5s-6.264-.007-7.831.404a2.56 2.56 0 0 0-1.766 1.778c-.413 1.566-.417 4.814-.417 4.814s-.004 3.264.406 4.814c.23.857.905 1.534 1.763 1.765 1.582.43 7.83.437 7.83.437s6.265.007 7.831-.403a2.515 2.515 0 0 0 1.767-1.763c.414-1.565.417-4.812.417-4.812s.02-3.265-.407-4.831zM9.996 15.005l.005-6 5.207 3.005-5.212 2.995z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+        <hr />
+        <a id="email" href="mailto:hai@intrevecini.ro">hai@intrevecini.ro</a>
+      </div>
+      <nav>
+        <a href="/">
+          <img class="iv-logo" src="assets/img/iv_logo.png" alt="IntreVecini" />
+        </a>
+        <button class="menu-toggle">
+          <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path>
+          </svg>
+        </button>
+        <ul class="link-list closed">
+          <li><a href="/">Acasă</a></li>
+          <!-- <li><a href="/resurse">Resurse</a></li> -->
+          <li><a href="cariere.html">Cariere</a></li>
+          <li><a href="voluntariat.html">Voluntariat</a></li>
+          <li><a href="parteneriate.html">Parteneriate</a></li>
+          <li><a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSfsTF00r0El1KkMbltlQbhDfbQ1Eba6dpCdv5CoJZ9PLuTgJg/viewform" class="iv-btn">Aplică pentru Finanțare</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <div class="hero-wrapper hero-2"  id="hero" >
+    <div class="hero-wrapper hero-2" id="hero">
+      <div class="container">
+        <h1>Folder-Like Buttons</h1>
+        <button class="folder-button active" onclick="showContent('content1', this)">Overview</button>
+        <button class="folder-button" onclick="showContent('content2', this)">Obiective</button>
+        <button class="folder-button" onclick="showContent('content3', this)">Criterii</button>
+        <button class="folder-button" onclick="showContent('content4', this)">Documente Suport</button>
+
+        <div id="content1" class="content active">
+          <p>
+            > Căutăm vecini de bloc și asociații care își doresc să formeze o comunitate și să organizeze alături de noi
+            evenimente cu vecinii în jurul sustenabilității. Vom monta gratuit panouri foto-voltaice pe blocul
+            comunității.
+          </p>
+
+          <p>
+            > Fiecare grup câștigător beneficiază de un grant de 15.000 euro, ce pot fi folosiți timp de 1 an pentru 10
+            activități și proiecte de dezvoltarea comunitară și pentru instalarea panourilor fotovoltaice pe bloc.
+          </p>
+
+          <p>
+            > De-a lungul proiectului, comunitatile primesc din partea echipei noastre suport pentru instalarea
+            panourilor, obținerea calității de prosumator, facilitarea activităților sustenabile și organizarea
+            comunitară.
+          </p>
+
+          <p>
+            > În această sesiune vom oferi suport în valoare de 150.000 EUR pentru 10 grupuri de vecini, ce pot aplica
+            din orice oraș din țară.
+          </p>
+        </div>
+
+        <div id="content2" class="content">
+          <h2>Obiectivele apelului de proiecte</h2>
+          La nivelul fiecarei comunitati castigatoare, crestere:
+          <ul>
+            <li>Gradul de implicare a vecinilor</li>
+            <li>Numar de vecini implicati in activitati comunitare</li>
+            <li>Capacitatea de a lucra impreuna</li>
+            <li>Sustenabilitate</li>
+          </ul>
+        </div>
+
+        <div id="content3" class="content">
+          <h2>Content 3</h2>
+          Pentru a fi eligibile să aplice pentru un grant ÎntreVecini, o comunitate de vecini trebuie să îndeplinească
+          următoarele criterii.
+          <ol type="a">
+            <li>Comunitatea trebuie să fie dintr-o zonă urbană</li>
+            <li>Blocul comunității aplicante trebuie să aibă o Asociație de Proprietari</li>
+            <li>Acoperișul blocului trebuie să poată beneficia de panouri fotovoltaice</li>
+            <li>
+              În proximitatea blocului există un spațiu deschis unde se pot organiza activități comunitare cu minim 100
+              de persoane
+            </li>
+            <li>
+              Există minim 5 vecini ce pot forma un nucleu de proiect și își pot asuma timp de 1 an, implementarea
+              activităților
+            </li>
+            <li>
+              Nucleul poate demonstra o bună cunoaștere și conectare la comunitatea în care va fi implementat proiectul,
+              prin istoric de proiecte derulate sau parteneriate locale.
+            </li>
+            <li>
+              Există minim un canal de comunicare activ cu vecinii din comunitate (Pagina de Facebook / Grup de
+              WhatsApp)
+            </li>
+          </ol>
+        </div>
+
+        <div id="content4" class="content">
+          <h2>Link formular de aplicatie Etapa 1</h2>
+          <p>Documente suport</p>
+        </div>
+
+        <script>
+          function showContent(contentId, button) {
+            var allContents = document.getElementsByClassName("content");
+            for (var i = 0; i < allContents.length; i++) {
+              allContents[i].classList.remove("active");
+            }
+
+            var selectedContent = document.getElementById(contentId);
+            selectedContent.classList.add("active");
+
+            var allButtons = document.getElementsByClassName("folder-button");
+            for (var i = 0; i < allButtons.length; i++) {
+              allButtons[i].style.backgroundColor = "#7EF92D"; // Initial color
+              allButtons[i].style.color = "#f0fce9";
+            }
+
+            // Change the color of the clicked button
+            button.style.backgroundColor = "#f0fce9";
+            button.style.color = "#41493B";
+          }
+        </script>
+      </div>
+    </div>
+
+    <div class="faq-area-1 space overflow-hidden bg-smoke">
+      <div class="container container2">
+        <div class="row align-items-center flex-row-reverse">
+          <div class="col-lg-6">
+            <div class="faq-img-1">
+              <img class="w-100" src="assets/img/normal/faq1.png" alt="img" />
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="title-area mb-45">
+              <span class="sub-title">FAQ</span>
+              <h2 class="sec-title mb-0">Aveti Intrebari?</h2>
+            </div>
+            <div class="accordion-area accordion" id="faqAccordion">
+              <div class="accordion-card active">
+                <div class="accordion-header" id="collapse-item-1">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse-1"
+                    aria-expanded="true"
+                    aria-controls="collapse-1"
+                  >
+                    What is the purpose of your company?
+                  </button>
+                </div>
+                <div
+                  id="collapse-1"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="collapse-item-1"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    <p class="faq-text">
+                      Ecology is the study of the relationships between living organisms and their environment,
+                      including the interactions between different species
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-card">
+                <div class="accordion-header" id="collapse-item-2">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse-2"
+                    aria-expanded="false"
+                    aria-controls="collapse-2"
+                  >
+                    What makes your company unique?
+                  </button>
+                </div>
+                <div
+                  id="collapse-2"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="collapse-item-2"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    <p class="faq-text">
+                      Ecology is the study of the relationships between living organisms and their environment,
+                      including the interactions between different species
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-card">
+                <div class="accordion-header" id="collapse-item-3">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse-3"
+                    aria-expanded="false"
+                    aria-controls="collapse-3"
+                  >
+                    How much time do I need to volunteer?
+                  </button>
+                </div>
+                <div
+                  id="collapse-3"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="collapse-item-3"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    <p class="faq-text">
+                      Ecology is the study of the relationships between living organisms and their environment,
+                      including the interactions between different species
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer-wrapper footer-layout1 overflow-hidden" data-bg-src="assets/img/bg/footer-bg-1.svg">
+      <div class="container">
+        <div class="footer-top">
+          <div class="row gy-4 align-items-center justify-content-center">
+            <div class="col-lg-4 col-md-6">
+              <div class="info-card">
+                <div class="info-card_icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="info-card_content">
+                  <h4 class="info-card_title">Our Location</h4>
+                  <p class="info-card_text">
+                    2416 Mapleview DriveTampa, <br />
+                    FL 33634
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="info-card">
+                <div class="info-card_icon">
+                  <i class="fas fa-phone-alt"></i>
+                </div>
+                <div class="info-card_content">
+                  <h4 class="info-card_title">Call us</h4>
+                  <p class="info-card_text">Telephone : <a href="tel:0029129102320">0029129102320</a></p>
+                  <p class="info-card_text">Mobile : <a href="tel:0029129102320">000 2324 39493</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="info-card">
+                <div class="info-card_icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="info-card_content">
+                  <h4 class="info-card_title">Our Email</h4>
+                  <p class="info-card_text">Main Email : <a href="mailto:contact@website">contact@website</a></p>
+                  <p class="info-card_text">ComInquiries : <a href="tel:info@mail.com">Info@mail.com</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="widget-area">
+          <div class="row justify-content-between">
+            <div class="col-md-6 col-xl-3 col-lg-4">
+              <div class="widget footer-widget">
+                <div class="widget-about">
+                  <div class="footer-logo">
+                    <a href="index.html"><img src="assets/img/logo2.svg" alt="Ecofine" /></a>
+                  </div>
+                  <p class="about-text">
+                    Protecting biodiversity and natural habitats is crucial for maintaining a healthy and sustainable
+                    ecology.
+                  </p>
+                  <div class="social-btn style2">
+                    <a href="https://facebook.com/" tabindex="0"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/" tabindex="0"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/" tabindex="0"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com/" tabindex="0"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-auto col-lg-4">
+              <div class="widget widget_nav_menu footer-widget">
+                <h3 class="widget_title">Quick Link</h3>
+                <div class="menu-all-pages-container">
+                  <ul class="menu">
+                    <li><a href="blog.html">Water Conservation</a></li>
+                    <li><a href="blog.html">Global Warming</a></li>
+                    <li><a href="blog.html">Climate Adaptation</a></li>
+                    <li><a href="blog.html">Urban planning</a></li>
+                    <li><a href="blog.html">Energy Consulting</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3 col-lg-4">
+              <div class="widget footer-widget">
+                <h3 class="widget_title">Recent News</h3>
+                <div class="recent-post-wrap">
+                  <div class="recent-post">
+                    <div class="media-img">
+                      <a href="blog-details.html"
+                        ><img src="assets/img/widget/recent-post1-1.jpg" alt="Blog Image"
+                      /></a>
+                    </div>
+                    <div class="media-body">
+                      <h4 class="post-title">
+                        <a class="text-inherit" href="blog-details.html">Go green and reduce your carbon…</a>
+                      </h4>
+                      <div class="recent-post-meta">
+                        <a href="blog.html"><i class="fas fa-calendar"></i> April 3, 2023</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="recent-post">
+                    <div class="media-img">
+                      <a href="blog-details.html"
+                        ><img src="assets/img/widget/recent-post1-2.jpg" alt="Blog Image"
+                      /></a>
+                    </div>
+                    <div class="media-body">
+                      <h4 class="post-title">
+                        <a class="text-inherit" href="blog-details.html">Make a statement support of the…</a>
+                      </h4>
+                      <div class="recent-post-meta">
+                        <a href="blog.html"><i class="fas fa-calendar"></i> April 3, 2023</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-3">
+              <div class="widget footer-widget">
+                <h3 class="widget_title">Newsletter</h3>
+                <p class="footer-text">Your opinion is important to us. So contact us for any service.</p>
+                <form class="newsletter-form">
+                  <div class="form-group">
+                    <input class="form-control" type="email" placeholder="Your Email Address" required="" />
+                  </div>
+                  <button type="submit" class="btn"><i class="fas fa-paper-plane"></i></button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright-wrap">
         <div class="container">
-            <h1>Folder-Like Buttons</h1>
-            <button class="folder-button active" onclick="showContent('content1', this)">Overview</button>
-            <button class="folder-button" onclick="showContent('content2', this)">Obiective</button>
-            <button class="folder-button" onclick="showContent('content3', this)">Criterii</button>
-            <button class="folder-button" onclick="showContent('content4', this)">Documente Suport</button>
-          
-            <div id="content1" class="content active">
-              <p>> Căutăm vecini de bloc și asociații care își doresc să formeze o comunitate și să organizeze alături de noi evenimente cu vecinii în jurul sustenabilității. Vom monta gratuit panouri foto-voltaice pe blocul comunității.  </p>
-
-
-               <p> > Fiecare grup câștigător beneficiază de un grant de 15.000 euro, ce pot fi folosiți timp de 1 an pentru 10 activități și proiecte de dezvoltarea comunitară și pentru instalarea panourilor fotovoltaice pe bloc.  </p>
-                
-                
-                <p> > De-a lungul proiectului, comunitatile primesc din partea echipei noastre suport pentru instalarea panourilor, obținerea calității de prosumator, facilitarea activităților sustenabile și organizarea comunitară.   </p>
-
-                <p> > În această sesiune vom oferi suport în valoare de 150.000 EUR pentru 10 grupuri de vecini, ce pot aplica din orice oraș din țară. </p>
-           
+          <div class="row gy-3 justify-content-lg-between justify-content-center">
+            <div class="col-auto align-self-center">
+              <p class="copyright-text">© Copyright 2023 <a href="#">Ecofine.</a> All Rights Reserved</p>
             </div>
-          
-            <div id="content2" class="content">
-              <h2>Obiectivele apelului de proiecte</h2>
-              La nivelul fiecarei comunitati castigatoare, crestere: 
-              <ul>
-                <li>Gradul de implicare a vecinilor</li>
-                <li>Numar de vecini implicati in activitati comunitare</li>
-                <li>Capacitatea de a lucra impreuna</li>
-                <li>Sustenabilitate</li>
-              </ul>
+            <div class="col-auto align-self-center">
+              <div class="footer-links">
+                <ul>
+                  <li><a href="about.html">Privacy Policy</a></li>
+                  <li><a href="about.html">Terms & Condition</a></li>
+                  <li><a href="about.html">Join Us</a></li>
+                </ul>
+              </div>
             </div>
-          
-            <div id="content3" class="content">
-              <h2>Content 3</h2>
-              Pentru a fi eligibile să aplice pentru un grant ÎntreVecini, o comunitate de vecini trebuie să îndeplinească următoarele criterii.
-              <ol type="a">
-                <li>Comunitatea trebuie să fie dintr-o zonă urbană</li>
-                <li>Blocul comunității aplicante trebuie să aibă o Asociație de Proprietari</li>
-                <li>Acoperișul blocului trebuie să poată beneficia de panouri fotovoltaice</li>
-                <li>În proximitatea blocului există un spațiu deschis unde se pot organiza activități comunitare cu minim 100 de persoane</li>
-                <li>Există minim 5 vecini ce pot forma un nucleu de proiect și își pot asuma timp de 1 an, implementarea activităților</li>
-                <li>Nucleul poate demonstra o bună cunoaștere și conectare la comunitatea în care va fi implementat proiectul, prin istoric de proiecte derulate sau parteneriate locale.</li>
-                <li>Există minim un canal de comunicare activ cu vecinii din comunitate (Pagina de Facebook / Grup de WhatsApp)</li>
-
-              </ol>
-            </div>
-          
-            <div id="content4" class="content">
-              <h2>Link formular de aplicatie Etapa 1</h2>
-              <p>Documente suport</p>
-            </div>
-          
-            <script>
-              function showContent(contentId, button) {
-                var allContents = document.getElementsByClassName('content');
-                for (var i = 0; i < allContents.length; i++) {
-                  allContents[i].classList.remove('active');
-                }
-          
-                var selectedContent = document.getElementById(contentId);
-                selectedContent.classList.add('active');
-
-                var allButtons = document.getElementsByClassName('folder-button');
-                for (var i = 0; i < allButtons.length; i++) {
-                    allButtons[i].style.backgroundColor = "#7EF92D"; // Initial color
-                    allButtons[i].style.color = "#f0fce9"
-                }
-
-                // Change the color of the clicked button
-                button.style.backgroundColor = "#f0fce9"; 
-                button.style.color = "#41493B"
-          
-              }
-            </script>
+          </div>
         </div>
-    </div>
+      </div>
+    </footer>
 
-    <div class="faq-area-1 space overflow-hidden bg-smoke">   
-        <div class="container container2">
-            <div class="row align-items-center flex-row-reverse">
-                <div class="col-lg-6">
-                    <div class="faq-img-1">
-                        <img class="w-100" src="assets/img/normal/faq1.png" alt="img">
-                    </div>       
-                </div>
-                <div class="col-lg-6">
-                    <div class="title-area mb-45">
-                        <span class="sub-title">FAQ</span>
-                        <h2 class="sec-title mb-0">Aveti Intrebari?</h2>
-                    </div>
-                    <div class="accordion-area accordion" id="faqAccordion">
-
-                        <div class="accordion-card active">
-                            <div class="accordion-header" id="collapse-item-1">
-                                <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1"> 
-                                    What is the purpose of your company?</button>
-                            </div>
-                            <div id="collapse-1" class="accordion-collapse collapse show" aria-labelledby="collapse-item-1" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    <p class="faq-text">Ecology is the study of the relationships between living organisms and their environment, including the interactions between different species</p>
-                                </div>
-                            </div>
-                        </div>
-    
-    
-                        <div class="accordion-card ">
-                            <div class="accordion-header" id="collapse-item-2">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">What makes your company unique?</button>
-                            </div>
-                            <div id="collapse-2" class="accordion-collapse collapse " aria-labelledby="collapse-item-2" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    <p class="faq-text">Ecology is the study of the relationships between living organisms and their environment, including the interactions between different species</p>
-                                </div>
-                            </div>
-                        </div>
-    
-    
-                        <div class="accordion-card ">
-                            <div class="accordion-header" id="collapse-item-3">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3">How much time do I need to volunteer?</button>
-                            </div>
-                            <div id="collapse-3" class="accordion-collapse collapse " aria-labelledby="collapse-item-3" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    <p class="faq-text">Ecology is the study of the relationships between living organisms and their environment, including the interactions between different species</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>                
-            </div>
-        </div>
-    </div>
-
-        <footer class="footer-wrapper footer-layout1 overflow-hidden" data-bg-src="assets/img/bg/footer-bg-1.svg">
-            <div class="container">
-                <div class="footer-top">
-                    <div class="row gy-4 align-items-center justify-content-center">
-                        <div class="col-lg-4 col-md-6">
-                            <div class="info-card">
-                                <div class="info-card_icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div class="info-card_content">
-                                    <h4 class="info-card_title">Our Location</h4>
-                                    <p class="info-card_text">2416 Mapleview DriveTampa, <br>
-                                        FL 33634</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="info-card">
-                                <div class="info-card_icon">
-                                    <i class="fas fa-phone-alt"></i>
-                                </div>
-                                <div class="info-card_content">
-                                    <h4 class="info-card_title">Call us</h4>
-                                    <p class="info-card_text">Telephone : <a href="tel:0029129102320">0029129102320</a>
-                                    </p>
-                                    <p class="info-card_text">Mobile : <a href="tel:0029129102320">000 2324 39493</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="info-card">
-                                <div class="info-card_icon">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <div class="info-card_content">
-                                    <h4 class="info-card_title">Our Email</h4>
-                                    <p class="info-card_text">Main Email : <a
-                                            href="mailto:contact@website">contact@website</a></p>
-                                    <p class="info-card_text">ComInquiries : <a
-                                            href="tel:info@mail.com">Info@mail.com</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="widget-area">
-                    <div class="row justify-content-between">
-                        <div class="col-md-6 col-xl-3 col-lg-4">
-                            <div class="widget footer-widget">
-                                <div class="widget-about">
-                                    <div class="footer-logo">
-                                        <a href="index.html"><img src="assets/img/logo2.svg" alt="Ecofine"></a>
-                                    </div>
-                                    <p class="about-text">Protecting biodiversity and natural habitats is crucial for
-                                        maintaining a healthy and sustainable ecology.</p>
-                                    <div class="social-btn style2">
-                                        <a href="https://facebook.com/" tabindex="0"><i
-                                                class="fab fa-facebook-f"></i></a>
-                                        <a href="https://twitter.com/" tabindex="0"><i class="fab fa-twitter"></i></a>
-                                        <a href="https://www.instagram.com/" tabindex="0"><i
-                                                class="fab fa-instagram"></i></a>
-                                        <a href="https://linkedin.com/" tabindex="0"><i
-                                                class="fab fa-linkedin-in"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-xl-auto col-lg-4">
-                            <div class="widget widget_nav_menu footer-widget">
-                                <h3 class="widget_title">Quick Link</h3>
-                                <div class="menu-all-pages-container">
-                                    <ul class="menu">
-                                        <li><a href="blog.html">Water Conservation</a></li>
-                                        <li><a href="blog.html">Global Warming</a></li>
-                                        <li><a href="blog.html">Climate Adaptation</a></li>
-                                        <li><a href="blog.html">Urban planning</a></li>
-                                        <li><a href="blog.html">Energy Consulting</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-xl-3 col-lg-4">
-                            <div class="widget footer-widget">
-                                <h3 class="widget_title">Recent News</h3>
-                                <div class="recent-post-wrap">
-                                    <div class="recent-post">
-                                        <div class="media-img">
-                                            <a href="blog-details.html"><img src="assets/img/widget/recent-post1-1.jpg"
-                                                    alt="Blog Image"></a>
-                                        </div>
-                                        <div class="media-body">
-                                            <h4 class="post-title"><a class="text-inherit" href="blog-details.html">Go
-                                                    green
-                                                    and reduce your carbon…</a></h4>
-                                            <div class="recent-post-meta">
-                                                <a href="blog.html"><i class="fas fa-calendar"></i> April 3, 2023</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="recent-post">
-                                        <div class="media-img">
-                                            <a href="blog-details.html"><img src="assets/img/widget/recent-post1-2.jpg"
-                                                    alt="Blog Image"></a>
-                                        </div>
-                                        <div class="media-body">
-                                            <h4 class="post-title"><a class="text-inherit" href="blog-details.html">Make
-                                                    a
-                                                    statement support of the…</a></h4>
-                                            <div class="recent-post-meta">
-                                                <a href="blog.html"><i class="fas fa-calendar"></i> April 3, 2023</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 col-xl-3">
-                            <div class="widget footer-widget">
-                                <h3 class="widget_title">Newsletter</h3>
-                                <p class="footer-text">Your opinion is important to us. So contact us for any service.
-                                </p>
-                                <form class="newsletter-form">
-                                    <div class="form-group">
-                                        <input class="form-control" type="email" placeholder="Your Email Address"
-                                            required="">
-                                    </div>
-                                    <button type="submit" class="btn"><i class="fas fa-paper-plane"></i></button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright-wrap">
-                <div class="container">
-                    <div class="row gy-3 justify-content-lg-between justify-content-center">
-                        <div class="col-auto align-self-center">
-                            <p class="copyright-text">© Copyright 2023 <a href="#">Ecofine.</a> All Rights Reserved</p>
-                        </div>
-                        <div class="col-auto align-self-center">
-                            <div class="footer-links">
-                                <ul>
-                                    <li><a href="about.html">Privacy Policy</a></li>
-                                    <li><a href="about.html">Terms & Condition</a></li>
-                                    <li><a href="about.html">Join Us</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-        <!--********************************
+    <!--********************************
 			Code End  Here 
 	******************************** -->
 
-        <!-- Scroll To Top -->
-        <div class="scroll-top">
-            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
-                    style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;">
-                </path>
-            </svg>
-        </div>
+    <!-- Scroll To Top -->
+    <div class="scroll-top">
+      <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path
+          d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+          style="
+            transition: stroke-dashoffset 10ms linear 0s;
+            stroke-dasharray: 307.919, 307.919;
+            stroke-dashoffset: 307.919;
+          "
+        ></path>
+      </svg>
+    </div>
 
-        <!--==============================
+    <!--==============================
     All Js File
     ============================== -->
-        <!-- Jquery -->
-        <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
-        <!-- Slick Slider -->
-        <script src="assets/js/slick.min.js"></script>
-        <!-- Bootstrap -->
-        <script src="assets/js/bootstrap.min.js"></script>
-        <!-- Magnific Popup -->
-        <script src="assets/js/jquery.magnific-popup.min.js"></script>
-        <!-- Counter Up -->
-        <script src="assets/js/jquery.counterup.min.js"></script>
-        <!-- Range Slider -->
-        <script src="assets/js/jquery-ui.min.js"></script>
+    <!-- Jquery -->
+    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <!-- Slick Slider -->
+    <script src="assets/js/slick.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!-- Counter Up -->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!-- Range Slider -->
+    <script src="assets/js/jquery-ui.min.js"></script>
 
+    <!-- Isotope Filter -->
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
 
-
-        <!-- Isotope Filter -->
-        <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-        <script src="assets/js/isotope.pkgd.min.js"></script>
-
-        <!-- Main Js File -->
-        <script src="assets/js/map.js"></script>
-        <script src="assets/js/main.js"></script>
-        <script type="module" src="https://geogratis.gc.ca/mapml/client/web-map/mapml-viewer.js" crossorigin></script>
-</body>
-
+    <!-- Main Js File -->
+    <script src="assets/js/map.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script type="module" src="https://geogratis.gc.ca/mapml/client/web-map/mapml-viewer.js" crossorigin></script>
+  </body>
 </html>
