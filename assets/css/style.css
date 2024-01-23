@@ -12984,6 +12984,7 @@ span.select2-selection.select2-selection--single:focus {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  width: 100%;
   /* Large devices */
 }
 .project-tab-btn .btn {
