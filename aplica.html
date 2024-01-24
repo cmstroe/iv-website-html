@@ -29,7 +29,8 @@
     />
 
     <style>
-      h1 {
+    
+      .h1 {
         text-align: left;
         margin-top: 20px;
         font-family: "IntreVecini", sans-serif;
@@ -49,6 +50,7 @@
         text-decoration: none;
         display: inline-block;
         font-size: 16px;
+        font-family: "IntreVecini", cursive;
         margin-right: 10px;
         margin-bottom: 0px;
         border-radius: 5px;
@@ -65,6 +67,7 @@
         width: 100%;
         padding: 20px;
         border-radius: 5px;
+        font-family: "IntreVecini", cursive;
       }
 
       .active {
@@ -75,6 +78,7 @@
         text-decoration: none;
         display: inline-block;
         font-size: 16px;
+        font-family:  "IntreVecini", sans-serif;
         margin-right: 10px;
         margin-bottom: 0px;
         border-radius: 5px;
@@ -82,6 +86,9 @@
         outline: none;
         border: none;
       }
+      .ul {
+            list-style-type: disc; /* Make sure the list style is not set to none */
+        }
     </style>
 
     <!-- CSS Stylesheets -->
@@ -207,13 +214,13 @@
 
     <div class="hero-wrapper hero-2"  id="hero" >
         <div class="container">
-            <h1>Vrei să îți formezi o comunitate la tine în bloc?
-                </h1>
-            <h2> Aplică pentru un grant ÎntreVecini de 15.000 euro, până pe 20 februarie. </h2>
-            <button class="folder-button active" onclick="showContent('content1', this)">Overview</button>
-            <button class="folder-button" onclick="showContent('content2', this)">Obiective</button>
-            <button class="folder-button" onclick="showContent('content3', this)">Criterii</button>
-            <button class="folder-button" onclick="showContent('content4', this)">Documente Suport</button>
+            <h3>Vrei să îți formezi o comunitate la tine în bloc?
+                </h3>
+            <h4> Aplică pentru un grant ÎntreVecini de 15.000 euro, până pe 20 februarie. </h4>
+            <button class="folder-button active" onclick="showContent('content1', this)">Despre Apel</button>
+            <button class="folder-button" onclick="showContent('content2', this)">Criterii de eligibilitate</button>
+            <button class="folder-button" onclick="showContent('content3', this)">Etapele apelului de proiecte</button>
+            <button class="folder-button" onclick="showContent('content4', this)">Criterii de selecție</button>
           
             <div id="content1" class="content active">
               <p>> Căutăm vecini de bloc și asociații care își doresc să formeze o comunitate și să organizeze alături de noi evenimente cu vecinii în jurul sustenabilității. Vom monta gratuit panouri foto-voltaice pe blocul comunității.  </p>
@@ -233,6 +240,13 @@
             > În această sesiune vom oferi suport în valoare de 150.000 EUR pentru 10 grupuri de vecini, ce pot aplica
             din orice oraș din țară.
           </p>
+
+          <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+        
         </div>
 
         <div id="content2" class="content">
@@ -247,30 +261,24 @@
         </div>
 
         <div id="content3" class="content">
-          <h2>Content 3</h2>
-          Pentru a fi eligibile să aplice pentru un grant ÎntreVecini, o comunitate de vecini trebuie să îndeplinească
-          următoarele criterii.
-          <ol type="a">
-            <li>Comunitatea trebuie să fie dintr-o zonă urbană</li>
-            <li>Blocul comunității aplicante trebuie să aibă o Asociație de Proprietari</li>
-            <li>Acoperișul blocului trebuie să poată beneficia de panouri fotovoltaice</li>
+          <h5>Criterii de selecție a comunităților câștigătoare</h5>
+          <p>ÎntreVecini își propune să găsească 10 grupuri de vecini ce doresc să dezvolte o comunitate, la ei în bloc, dar și în blocurile din vecinătate. Ne dorim parteneri ce își doresc sincer să înceapă un proces transformator la nivel local, din grijă față de vecini și din dorința de a trăi împreună, altfel. </p>
+          <p>Ne uităm după grupuri de vecini cărora să le oferim cei 15.000 euro care:</p>
+          <ol type ="A">
+            <li>A. Înțeleg că este vorba despre un proces de dezvoltare comunitară, nu (doar) de montare de panouri fotovoltaice pe bloc, ce implică timp pentru organizare și reflecție </li>
+            <li>B. Înțeleg nevoile vecinilor și le pot transforma în activități și proiecte</li>
+            <li>C. Pot implica și atrage vecini în co-crearea și organizarea lor</li>
             <li>
-              În proximitatea blocului există un spațiu deschis unde se pot organiza activități comunitare cu minim 100
-              de persoane
+              D. Pot aduce alături afaceri, ONG-uri sau instituții locale
             </li>
             <li>
-              Există minim 5 vecini ce pot forma un nucleu de proiect și își pot asuma timp de 1 an, implementarea
-              activităților
+              E. Au grijă de mediului înconjurător și asupra modului în care resursele sunt folosite
             </li>
             <li>
-              Nucleul poate demonstra o bună cunoaștere și conectare la comunitatea în care va fi implementat proiectul,
-              prin istoric de proiecte derulate sau parteneriate locale.
-            </li>
-            <li>
-              Există minim un canal de comunicare activ cu vecinii din comunitate (Pagina de Facebook / Grup de
-              WhatsApp)
+              F. Doresc să susțină proiectul și după anul de parteneriat cu ÎntreVecini
             </li>
           </ol>
+          <p>  Te invităm să citești și Ghid ÎntreVecini și Comunitatea Ta, unde explicăm procesul la care vă angrenați, o dată cu câștigarea grantului.  </p>
         </div>
 
         <div id="content4" class="content">
@@ -326,7 +334,7 @@
                     aria-expanded="true"
                     aria-controls="collapse-1"
                   >
-                    What is the purpose of your company?
+                  Ce costuri acoperă grantul de 15.000 Euro
                   </button>
                 </div>
                 <div
@@ -354,7 +362,7 @@
                     aria-expanded="false"
                     aria-controls="collapse-2"
                   >
-                    What makes your company unique?
+                  Cum mă ajută panourile fotovoltaice?
                   </button>
                 </div>
                 <div
@@ -382,7 +390,7 @@
                     aria-expanded="false"
                     aria-controls="collapse-3"
                   >
-                    How much time do I need to volunteer?
+                  Ce tip de evenimente și proiecte comunitare trebuie să organizăm de-a lungul unui an?
                   </button>
                 </div>
                 <div

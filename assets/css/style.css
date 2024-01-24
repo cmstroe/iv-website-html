@@ -2495,7 +2495,7 @@ textarea.is-invalid {
   font-family: var(--body-font);
   display: block;
   align-items: center;
-  margin-top: -0.4em;
+  margin-top: 3px
 }
 .sub-title.style2 {
   display: block;
@@ -10898,7 +10898,7 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 .faq-content-wrap {
-  padding: 0 108px;
+  padding: 0 0x;
   /* Medium Large devices */
   /* Medium devices */
   /* Extra small devices */
