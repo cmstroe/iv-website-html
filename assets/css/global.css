@@ -267,7 +267,16 @@ p {
 
 /* ------------------------ About Section ------------------------ */
 
+.about-section {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+}
 
+.about-left-side img {
+  border-left: 15px solid var(--iv-green);
+  padding-left: 25px;
+}
 
 /* ------------------------ Sponsors Section ------------------------ */
 
