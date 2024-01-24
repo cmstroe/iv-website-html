@@ -184,8 +184,7 @@ p {
     position: fixed;
     inset: 14% 0 0;
     padding-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     flex-direction: column;
     gap: 2.4rem;
   }
@@ -227,7 +226,7 @@ p {
 
 /* ------------------------ Hero Area ------------------------ */
 
-.hero-area {
+.hero-section {
   color: var(--iv-white);
   display: grid;
   align-items: center;
@@ -247,12 +246,12 @@ p {
   gap: 3rem;
 }
 
-.hero-area h1 {
+.hero-section h1 {
   color: var(--iv-white);
   font-size: 5.6rem;
 }
 
-.hero-area p {
+.hero-section p {
   font-size: 2.4rem;
 }
 
