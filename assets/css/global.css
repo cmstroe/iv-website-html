@@ -176,7 +176,7 @@ p {
   display: none;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1500px) {
   .link-list {
     display: flex;
     background-color: rgba(10, 44, 0, 0.5);
@@ -218,7 +218,7 @@ p {
   }
 }
 
-@media (min-width: 1301px) {
+@media (min-width: 1501px) {
   .menu-toggle {
     display: none;
   }
@@ -263,4 +263,33 @@ p {
   color: var(--iv-dark-green);
   font-family: "IntreVecini", cursive;
   width: fit-content;
+}
+
+/* ------------------------ About Section ------------------------ */
+
+
+
+/* ------------------------ Sponsors Section ------------------------ */
+
+.sponsors-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
+}
+
+.sponsors-grid img {
+  height: 150px;
+}
+
+@media (max-width: 1501px) {
+  .sponsors-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: left;
+  }
+
+  .sponsors-grid img {
+    height: 150px;
+    object-fit: cover;
+  }
 }
