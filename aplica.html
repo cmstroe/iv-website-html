@@ -30,18 +30,35 @@
 
     <style>
     
-      .h1 {
+      .h3-padded {
         text-align: left;
         margin-top: 20px;
         font-family: "IntreVecini", sans-serif;
+        padding-left: 120px;
+        font-size: 40px;
+        color: #41493b;
       }
 
-      .folder-container {
-        text-align: center;
+      .h4-padded {
+        text-align: left;
         margin-top: 20px;
         font-family: "IntreVecini", sans-serif;
+        padding-left: 120px;
+        font-size: 20px;
+        color: #41493b;
       }
-
+      .folder-container {
+        padding-top: 60px;
+        text-align: left;
+        margin-top: 10px;
+        font-family: "IntreVecini", sans-serif;
+        width : 100%;
+        height: 100%;
+        background-color: #7ef92d;
+      }
+      .div-butoane {
+        margin-left: 100px;
+      }
       .folder-button {
         background-color: #7ef92d; /* Green */
         color: white;
@@ -58,7 +75,23 @@
         outline: none;
         border: none;
       }
-
+      .folder-button-1 {
+        background-color: #7ef92d; /* Green */
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        font-family: "IntreVecini", cursive;
+        margin-right: 10px;
+        margin-left: 100px;
+        margin-bottom: 0px;
+        border-radius: 5px;
+        cursor: pointer;
+        outline: none;
+        border: none;
+      }
       .content {
         display: none;
         color: #f0f0f0;
@@ -66,7 +99,7 @@
         position: relative;
         width: 100%;
         padding: 20px;
-        border-radius: 5px;
+        border-radius: 0px;
         font-family: "IntreVecini", cursive;
       }
 
@@ -86,9 +119,85 @@
         outline: none;
         border: none;
       }
-      .ul {
-            list-style-type: disc; /* Make sure the list style is not set to none */
+
+        .text-with-padding {
+            margin-top: 20px;
+            padding-left: 120px; /* Padding for the text */
+            padding-right: 100px;
+            font-size: 18px;
+            font-family:  "IntreVecini", sans-serif;
         }
+
+        .text-with-padding-etape {
+            margin-top: 20px;
+            padding-left: 160px; /* Padding for the text */
+            padding-right: 100px;
+            font-size: 18px;
+            font-family:  "IntreVecini", sans-serif;
+        }
+
+        .lista {
+            width: 50%;
+            margin: auto;
+            background-color: #f0f0f0; /* Container background color */
+            padding: 20px; /* Container padding */
+            font-family:  "IntreVecini", sans-serif;
+        }
+        .cutie {
+            padding-left: 130px;
+            margin-top: 20px;
+            align-items: left;
+            margin-right: 20px;
+            padding-right: 20px;
+        }
+        .lista-numere ol {
+            list-style-type: decimal; /* Set list style to decimal (1, 2, 3, ...) */
+            padding-left: 170px; /* Optional: Add padding to the left of the list */
+
+        }
+
+        .lista-numere li {
+            margin-bottom: 20px; /* Optional: Add margin between list items */
+            font-family:  "IntreVecini", sans-serif;
+            font-size: 18px;
+        }
+
+        .date {
+            display: flex;
+            align-items: right;
+            text-align: right;
+            font-family: "IntreVecini", sans-serif;
+            box-sizing: border-box;
+            padding-left: 800px;
+        }
+
+        .date-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            background: url('calendar-icon.png');
+            background-size: cover;
+            text-align: right;
+            font-family: "IntreVecini", sans-serif;
+        }
+        .date-etapa3 {
+            display: flex;
+            text-align: right;
+            font-family: "IntreVecini", sans-serif;
+            box-sizing: border-box;
+            padding-left: 150px;
+        }
+
+        .date-etapa3-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            background: url('calendar-icon.png');
+            background-size: cover;
+            text-align: right;
+            font-family: "IntreVecini", sans-serif;
+        }
+
     </style>
 
     <!-- CSS Stylesheets -->
@@ -213,77 +322,115 @@
     </header>
 
     <div class="hero-wrapper hero-2"  id="hero" >
-        <div class="container">
-            <h3>Vrei să îți formezi o comunitate la tine în bloc?
-                </h3>
-            <h4> Aplică pentru un grant ÎntreVecini de 15.000 euro, până pe 20 februarie. </h4>
-            <button class="folder-button active" onclick="showContent('content1', this)">Despre Apel</button>
+        <div class="folder-container">
+            <div class = "h3-padded">Vrei să îți formezi o comunitate la tine în bloc?
+            </div>
+            <div class = "h4-padded"> Aplică pentru un grant ÎntreVecini de 15.000 euro, până pe 20 februarie. </div>
+            <button class="folder-button-1 active" margin-left="100px" onclick="showContent('content1', this)">Despre Apel</button>
             <button class="folder-button" onclick="showContent('content2', this)">Criterii de eligibilitate</button>
             <button class="folder-button" onclick="showContent('content3', this)">Etapele apelului de proiecte</button>
             <button class="folder-button" onclick="showContent('content4', this)">Criterii de selecție</button>
           
             <div id="content1" class="content active">
-              <p>> Căutăm vecini de bloc și asociații care își doresc să formeze o comunitate și să organizeze alături de noi evenimente cu vecinii în jurul sustenabilității. Vom monta gratuit panouri foto-voltaice pe blocul comunității.  </p>
-
-          <p>
-            > Fiecare grup câștigător beneficiază de un grant de 15.000 euro, ce pot fi folosiți timp de 1 an pentru 10
-            activități și proiecte de dezvoltarea comunitară și pentru instalarea panourilor fotovoltaice pe bloc.
+                <div class="h4-padded">Despre Apel </div> 
+              <p class = text-with-padding > Căutăm 10 grupuri de vecini de bloc și asociații care își doresc să formeze o comunitate, să organizeze 10 evenimente și proiecte alături de vecinii lor și să devină prosumatori. </p>
+                <p class = text-with-padding>
+                    Fiecare grup câștigător beneficiază de un grant de 15.000 de euro, de sprijin de-a lungul unui an din partea echipei noastre în procesul de dezvoltare comunitară și de panouri foto-voltaice pe bloc. 
           </p>
 
-          <p>
-            > De-a lungul proiectului, comunitatile primesc din partea echipei noastre suport pentru instalarea
-            panourilor, obținerea calității de prosumator, facilitarea activităților sustenabile și organizarea
-            comunitară.
+          <p class = text-with-padding>
+             În acest apel de proiecte, ce face parte dintr-un proces de scalare națională ÎntreVecini, pot aplica grupuri de vecini din orice oraș din România.
           </p>
-
-          <p>
-            > În această sesiune vom oferi suport în valoare de 150.000 EUR pentru 10 grupuri de vecini, ce pot aplica
-            din orice oraș din țară.
-          </p>
-
-          <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-        </ul>
         
         </div>
 
         <div id="content2" class="content">
-          <h2>Obiectivele apelului de proiecte</h2>
-          La nivelul fiecarei comunitati castigatoare, crestere:
-          <ul>
-            <li>Gradul de implicare a vecinilor</li>
-            <li>Numar de vecini implicati in activitati comunitare</li>
-            <li>Capacitatea de a lucra impreuna</li>
-            <li>Sustenabilitate</li>
-          </ul>
+          <!-- <div class ="h4-padded">Criterii de eligibilitate</div> -->
+          <p class = text-with-padding>
+            Sunteți eligibili pentru a aplica, dacă:
+         </p>
+       
+         <div class="lista-numere">
+            <ol>
+                <li> ➊ Locuiți într-un oraș</li>
+                <li> ➋ Blocul are asociație de proprietari asociație de proprietari, ce își poate asuma relația juridică cu ÎntreVecini</li>
+                <li> ➌ Terasa blocului are o suprafața neumbrită de minim 40mp*</li>
+                <li> ➍ În jurul blocului există spațiu pentru activități comunitare </li>
+                <li> ➎ Minim 5 vecini pot forma un grup inițial de organizare a proiectului (nucleu), cu responsabilitatea de a duce cele 10 activități și proiecte la îndeplinire </li>
+                <li> ➏ Grupul de vecini este conectat la nevoile și dinamica din comunitatea </li>
+                <li> ➐ Aveți minim un canal de comunicare activ cu vecinii din comunitate (Pagină de Facebook / Grup de WhatsApp)                </li>
+
+                <!-- Add more items as needed -->
+            </ol>
+        </div>
         </div>
 
         <div id="content3" class="content">
-          <h5>Criterii de selecție a comunităților câștigătoare</h5>
-          <p>ÎntreVecini își propune să găsească 10 grupuri de vecini ce doresc să dezvolte o comunitate, la ei în bloc, dar și în blocurile din vecinătate. Ne dorim parteneri ce își doresc sincer să înceapă un proces transformator la nivel local, din grijă față de vecini și din dorința de a trăi împreună, altfel. </p>
-          <p>Ne uităm după grupuri de vecini cărora să le oferim cei 15.000 euro care:</p>
-          <ol type ="A">
-            <li>A. Înțeleg că este vorba despre un proces de dezvoltare comunitară, nu (doar) de montare de panouri fotovoltaice pe bloc, ce implică timp pentru organizare și reflecție </li>
-            <li>B. Înțeleg nevoile vecinilor și le pot transforma în activități și proiecte</li>
-            <li>C. Pot implica și atrage vecini în co-crearea și organizarea lor</li>
-            <li>
-              D. Pot aduce alături afaceri, ONG-uri sau instituții locale
-            </li>
-            <li>
-              E. Au grijă de mediului înconjurător și asupra modului în care resursele sunt folosite
-            </li>
-            <li>
-              F. Doresc să susțină proiectul și după anul de parteneriat cu ÎntreVecini
-            </li>
-          </ol>
-          <p>  Te invităm să citești și Ghid ÎntreVecini și Comunitatea Ta, unde explicăm procesul la care vă angrenați, o dată cu câștigarea grantului.  </p>
+            <div class="cutie">
+          <a href="aplica.html" class="btn style4"> Vezi toate detaliile în Ghidul Aplicantului</a>
+            </div>
+          <div class ="h4-padded">Etapa 1: Completarea formularului de aplicație</div>
+          <div class="date">
+            <div class="date-icon"></div>
+            📅 Perioada: 01.02.2024 - 20.02.2024<!-- Replace with your dynamic date -->
+            </div>
+          <p class=text-with-padding-etape>În vederea completării formularului, este nevoie să se formeze, în prealabil, o echipă de minim 5 vecini, ce vor aplica împreună în numele comunității. Cei 5 vecini vor forma nucleul proiectului. Este de preferat, dar nu obligatoriu, ca președintele sau administratorul de bloc să facă parte din grup. 
+        </p>
+          <p class="text-with-padding-etape">Ne uităm după grupuri de vecini cărora să le oferim cei 15.000 euro care:</p>
+          <div class="lista-numere">
+          <ol>
+            <li> • Locuiți într-un oraș</li>
+            <li> • Blocul are asociație de proprietari, ce își poate asuma relația juridică cu ÎntreVecini</li>
+         <!-- Add more items as needed -->
+        </ol>
+    
+         
+        <div class ="h4-padded">Etapa 2: Depunere documente</div>
+        <div class="date">
+        <div class="date-icon"></div>
+        📅 Perioada: 22.02.2024 - 27.02.2034
+            
         </div>
-
+        <p class=text-with-padding-etape>Aplicanții selectați în etapa 1, vor depune 2 documente pentru a dovedi că au susținerea asociației de proprietari și a locatarilor unde vor fi montate panourile fotovoltaice. </p>
+        
+        <div class ="h4-padded">Etapa 3: Susținerea prezentărilor de comunitate (concurs online)</div>
+        <div class="date-etapa3">
+            <div class="date-etapa3-icon"></div>
+            📅 Perioada de pregătire a prezentărilor de comunitate: 01.03.2024 - 15.03.2024 
+            </div>
+            <div class="date-etapa3">
+            <div class="date-etapa3-icon"></div>
+            📅 Susținerea prezentărilor: 16 - 17.03.2024
+        </div>
+        <p class=text-with-padding-etape>Aplicanții ce au trecut de primele două etape, vor pregăti o prezentare prin care vor convinge juriul că nevoile și dorințele vecinilor sunt transformate în evenimente și proiecte cu impact. Vor susține aceste prezentări, în format online, în weekend-ul 16-17.03.2024.</p>
+        <p class=text-with-padding-etape>Aplicanții câștigători vor fi anunțați pe data de 21.03.2024, printr-un e-mail de confirmare. Apoi, începem colaborarea. Citește aici, ce înseamnă parteneriatul cu ÎntreVecini în comunitatea ta, pentru a ști la ce să te aștepti, în cazul în care vei câștiga.</p>
+        </div>
+        </div>
         <div id="content4" class="content">
-          <h2>Link formular de aplicatie Etapa 1</h2>
-          <p>Documente suport</p>
+            <!-- <div class ="h4-padded">Criterii de selecție a comunităților câștigătoare</div> -->
+            <p class = text-with-padding>ÎntreVecini își propune să găsească 10 grupuri de vecini ce doresc să dezvolte o comunitate, la ei în bloc, dar și în blocurile din vecinătate. Ne dorim parteneri ce își doresc sincer să înceapă un proces transformator la nivel local, din grijă față de vecini și din dorința de a trăi împreună, altfel. </p>
+            <p class = text-with-padding>Ne uităm după grupuri de vecini cărora să le oferim cei 15.000 euro care:</p>
+            <div class="lista-numere">
+                <ol>
+              <li>A. Înțeleg că este vorba despre un proces de dezvoltare comunitară, nu (doar) de montare de panouri fotovoltaice pe bloc, ce implică timp pentru organizare și reflecție </li>
+              <li>B. Înțeleg nevoile vecinilor și le pot transforma în activități și proiecte</li>
+              <li>C. Pot implica și atrage vecini în co-crearea și organizarea lor</li>
+              <li>
+                D. Pot aduce alături afaceri, ONG-uri sau instituții locale
+              </li>
+              <li>
+                E. Au grijă de mediului înconjurător și asupra modului în care resursele sunt folosite
+              </li>
+              <li>
+                F. Doresc să susțină proiectul și după anul de parteneriat cu ÎntreVecini
+              </li>
+            </ol>
+            <p class = text-with-padding>Te invităm să citești și Ghid ÎntreVecini și Comunitatea Ta, unde explicăm procesul la care vă angrenați, o dată cu câștigarea grantului.  </p>
+            <div class="cutie">
+                <a href="aplica.html" class="btn style4">  Aplică aici până pe 22 februarie</a>
+                  
+                    <a href="aplica.html" class="btn style4">Consultă Ghidul Aplicantului </a>
+                      </div>
         </div>
 
         <script>
