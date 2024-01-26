@@ -382,7 +382,7 @@ p {
 .media-slider img {
   width: 14rem;
   margin: 0 6rem;
-  transition: transform .2s;
+  transition: transform 0.2s;
 }
 
 .media-slider a:hover img {
