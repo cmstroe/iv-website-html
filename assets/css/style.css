@@ -2061,14 +2061,16 @@ textarea.is-invalid {
   text-align: center;
   background-color: var(--theme-color);
   color: var(--white-color);
-  font-family: var(--body-font);
-  font-size: 16px;
+  font-family: "IntreVecini";
+  font-size: 13px;
   font-weight: 600;
   line-height: 25px;
-  padding: 15px 32px;
+  padding: 15px 20px;
+  padding-left: 150px;
   overflow: hidden;
   transition: all 0.35s;
   border-radius: 5px;
+  margin-right: 20px;
   /* Medium Large devices */
 }
 .btn i {
@@ -2076,6 +2078,7 @@ textarea.is-invalid {
   top: 1px;
   margin-left: 5px;
   transition: 0.4s;
+  margin-right: 10px;
 }
 .btn:after {
   animation: opacityFallbackOut 0.5s step-end forwards;
@@ -2788,9 +2791,9 @@ textarea.is-invalid {
   padding-right: 0;
 }
 .social-btn.style4 a {
-  --icon-size: 40px;
+  --icon-size: 20px;
   line-height: 40px;
-  font-size: 16px;
+  font-size: 10px;
   background: transparent;
   color: var(--white-color);
   border-color: var(--white-color);
@@ -7435,14 +7438,14 @@ li.trackback {
 }
 /* Hero 2 ---------------------------------- */
 .hero-2 {
-  padding-top: 200px;
+  padding-top: 100px;
   background-position: left;
   background-color: #dff0d5;
   font-family: "IntreVecini";
 }
 
 .hero-style2 {
-  padding: 218px 130px 174px 0px;
+  padding: 0px 0px 0px 0px;
 }
 .hero-style2 .hero-title {
   color: var(--title-color);
@@ -7452,28 +7455,28 @@ li.trackback {
   font-size: 18px;
   line-height: 30px;
   margin-bottom: 45px;
-  max-width: 605px;
+  max-width: 100%;
 }
 
 /* Extra large devices */
-@media (max-width: 1500px) {
+@media (max-width: 100%) {
   .hero-2 {
     background-position: center;
   }
 }
 /* Medium Large devices */
-@media (max-width: 1399px) {
+@media (max-width: 100%) {
   .hero-style2 {
-    padding: 198px 0 154px 0px;
+    padding: 0px 0 0px 0px;
   }
 }
 /* Medium devices */
-@media (max-width: 991px) {
+@media (max-width: 100%) {
   .hero-2 {
     background-position: left;
   }
   .hero-style2 {
-    padding: 168px 0 124px 0px;
+    padding: 0px 0 0px 0px;
   }
 }
 /* Small devices */
