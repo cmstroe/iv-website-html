@@ -2063,6 +2063,8 @@ textarea.is-invalid {
   color: var(--white-color);
   font-family: "IntreVecini";
   font-size: 13px;
+  font-family: "IntreVecini";
+  font-size: 13px;
   font-weight: 600;
   line-height: 25px;
   padding: 15px 20px;
